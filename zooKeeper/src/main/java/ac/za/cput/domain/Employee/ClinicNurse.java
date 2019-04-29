@@ -1,7 +1,6 @@
 package ac.za.cput.domain.Employee;
 
-public class ClinicNurse {
+public class ClinicNurse extends Employee{
 
-    private int nurseId;
-    private String firstName, lastName, title;
+
 }

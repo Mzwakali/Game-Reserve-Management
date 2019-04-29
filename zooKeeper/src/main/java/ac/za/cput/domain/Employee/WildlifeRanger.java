@@ -1,7 +1,6 @@
 package ac.za.cput.domain.Employee;
 
-public class WildlifeRanger {
+public class WildlifeRanger extends Employee{
 
-    private int wildRangerId;
-    private String firstName, lastName, title;
+
 }

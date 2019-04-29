@@ -12,8 +12,9 @@ public class FieldGuide {
         this.firstName = builder.firstName;
     }
 
-    public void setFirstName(String firstName) {
+    public FieldGuide setFirstName(String firstName) {
         this.firstName = firstName;
+        return null;
     }
 
     public static class Builder {

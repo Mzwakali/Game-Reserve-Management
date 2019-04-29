@@ -2,9 +2,8 @@ package ac.za.cput.domain.Employee;
 
 import java.util.*;
 
-public class Security {
+public class Security extends Employee{
 
-    private int securityId;
-    private String firstName, lastName, title;
+
 
 }

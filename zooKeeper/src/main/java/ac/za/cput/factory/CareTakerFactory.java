@@ -4,12 +4,12 @@ import ac.za.cput.domain.Employee.Caretaker;
 import ac.za.cput.util.Misc;
 
 public class CareTakerFactory {
-    public static Caretaker getCareTaker(String firstName, String lastName,String jobTitle,  int age) {
-        return new Caretaker.Builder().age(age)
+    public static Caretaker getCareTaker(String firstName, String lastName, String position, int age) {
+        return (Caretaker) new Caretaker.CaretakerBuilder()
                 .firstName(firstName)
                 .lastName(lastName)
-                .jobTitle(jobTitle)
-                .keeperId(Misc.generateId())
+                .position(position)
+                .empId(Misc.generateId())
                 .build();
     }
 }

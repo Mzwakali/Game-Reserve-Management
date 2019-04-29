@@ -12,7 +12,7 @@ public class Visitor {
     }
 
     public Visitor(int visitorId, String firstName, String lastName, String cellphone, FieldGuide guide) {
-        this.visitorId = visitorId;
+       this.visitorId = visitorId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.cellphone = cellphone;
@@ -93,7 +93,6 @@ public class Visitor {
         @Override
         public String toString() {
             return "Builder{" +
-                    "visitorId=" + visitorId +
                     ", firstName='" + firstName + '\'' +
                     ", lastName='" + lastName + '\'' +
                     ", cellphone='" + cellphone + '\'' +

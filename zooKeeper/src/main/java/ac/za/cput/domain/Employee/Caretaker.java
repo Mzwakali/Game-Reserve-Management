@@ -4,124 +4,48 @@ import ac.za.cput.domain.GameReserve.GameReserve;
 
 import java.util.Set;
 
-public class Caretaker {
+public class Caretaker extends Employee{
 
-    private int careTakerId;
-    private String firstName;
-    private String lastName;
-    private String jobTitle;
-    private int age;
-    private Set<GameReserve> gameReserve;
+    private int[] keys;
 
-    public Caretaker() {
+    public Caretaker(){
     }
 
-    public Caretaker(Builder builder) {
-        this.careTakerId = builder.careTakerId;
-        this.age = builder.age;
-        this.firstName = builder.firstName;
-        this.lastName = builder.lastName;
-        this.jobTitle = builder.jobTitle;
+    public Caretaker(CaretakerBuilder builder){
+        super(builder);
+        this.keys = builder.keys;
     }
 
-    public void setCareTakerId(int careTakerId) {
-        this.careTakerId = careTakerId;
+
+    public int[] getKeys() {
+        return keys;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setKeys(int[] keys){
+        this.keys = keys;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+    public static class CaretakerBuilder extends Employee.Builder{
+        private int[] keys;
 
-    public void setJobTitle(String jobTitle) {
-        this.jobTitle = jobTitle;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public void setGameReserve(Set<GameReserve> gameReserve) {
-        this.gameReserve = gameReserve;
-    }
-
-    public int getCareTakerId() {
-        return careTakerId;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public Set<GameReserve> getGameReserve() {
-        return gameReserve;
-    }
-
-    public String getJobTitle() {
-        return jobTitle;
-    }
-
-    public static class Builder {
-
-        private String  firstName, lastName, jobTitle;
-        private int careTakerId, age;
-        private Set<GameReserve> gameReserve;
-
-        public Builder() {
+        public CaretakerBuilder(){
+            super();
         }
 
-        public Builder keeperId( int keeperId) {
-            this.careTakerId = keeperId;
+        public CaretakerBuilder keys(int[] keys){
+            this.keys = keys;
             return this;
-        }
-
-        public Builder firstName( String firstName) {
-            this.firstName = firstName;
-            return this;
-        }
-
-        public Builder lastName( String lastName) {
-            this.lastName = lastName;
-            return this;
-        }
-
-        public Builder age( int age) {
-            this.age = age;
-            return this;
-        }
-
-        public Builder jobTitle( String jobTitle) {
-            this.jobTitle = jobTitle;
-            return this;
-        }
-
-        public Caretaker build() {
-            return new Caretaker();
         }
 
         @Override
-        public String toString() {
-            return "Builder{" +
-                    "careTakerId='" + careTakerId + '\'' +
-                    ", firstName='" + firstName + '\'' +
-                    ", lastName='" + lastName + '\'' +
-                    ", jobTitle='" + jobTitle + '\'' +
-                    ", age=" + age +
-                    ", gameReserve=" + gameReserve +
-                    '}';
+        public Employee build(){
+            return new Caretaker(this);
         }
+
+        @Override
+        public String toString(){
+            return super.toString();
+        }
+
     }
-
-
 }

@@ -2,9 +2,8 @@ package ac.za.cput.domain.Employee;
 
 import java.util.*;
 
-public class MarineRanger {
+public class MarineRanger extends Employee{
 
-    private int marineRangerId;
-    private String firstName, lastName, title;
+
     private List<Qualification> qualificationList;
 }
