@@ -2,11 +2,10 @@ package ac.za.cput.repository.Implementation;
 
 import ac.za.cput.domain.Employee.ClinicDoc;
 import ac.za.cput.factory.ClinicDocFactory;
+import ac.za.cput.repository.EmployeeRepository.Imp.ClinicDocRepositoryImp;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class ClinicDocRepositoryImpTest {
 

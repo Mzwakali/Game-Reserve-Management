@@ -1,4 +1,4 @@
-package ac.za.cput.repository.Implementation;
+package ac.za.cput.repository.VisitorRepository.Imp;
 
 import ac.za.cput.domain.Visitor.Visitor;
 import ac.za.cput.repository.VisitorRepository.VisitorRepository;

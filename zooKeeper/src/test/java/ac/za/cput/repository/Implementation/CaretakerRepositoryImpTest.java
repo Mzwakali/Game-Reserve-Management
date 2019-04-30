@@ -1,14 +1,11 @@
 package ac.za.cput.repository.Implementation;
 
 import ac.za.cput.domain.Employee.Caretaker;
-import ac.za.cput.domain.Employee.Employee;
 import ac.za.cput.factory.CareTakerFactory;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import ac.za.cput.repository.Implementation.CaretakerRepositoryImp;
-
-import static org.junit.Assert.*;
+import ac.za.cput.repository.EmployeeRepository.Imp.CaretakerRepositoryImp;
 
 public class CaretakerRepositoryImpTest {
 

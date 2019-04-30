@@ -4,14 +4,10 @@ import ac.za.cput.domain.Employee.FieldGuide;
 import ac.za.cput.domain.Visitor.Visitor;
 import ac.za.cput.factory.FieldGuideFactory;
 import ac.za.cput.factory.LocalVisitorFactory;
-import ac.za.cput.repository.VisitorRepository.VisitorRepository;
+import ac.za.cput.repository.VisitorRepository.Imp.VisitorRepositoryImpl;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
-import java.lang.reflect.Field;
-
-import static org.junit.Assert.*;
 
 public class VisitorRepositoryImplTest {
 

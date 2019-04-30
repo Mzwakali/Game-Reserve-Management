@@ -1,7 +1,6 @@
-package ac.za.cput.repository.Implementation;
+package ac.za.cput.repository.EmployeeRepository.Imp;
 
 import ac.za.cput.domain.Employee.ClinicNurse;
-import ac.za.cput.factory.ClinicNurseFactory;
 import ac.za.cput.repository.EmployeeRepository.ClinicNurseRepository;
 
 import java.util.HashSet;

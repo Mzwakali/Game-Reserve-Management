@@ -1,4 +1,4 @@
-package ac.za.cput.repository.Implementation;
+package ac.za.cput.repository.EmployeeRepository.Imp;
 
 import ac.za.cput.domain.Employee.MarineRanger;
 import ac.za.cput.repository.EmployeeRepository.MarineRangerRepository;
