@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Game-Reserve-Management.iml" filepath="$PROJECT_DIR$/.idea/Game-Reserve-Management.iml" />
-      <module fileurl="file://$PROJECT_DIR$/zooKeeper/zooKeeper.iml" filepath="$PROJECT_DIR$/zooKeeper/zooKeeper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/game-reserve.iml" filepath="$PROJECT_DIR$/game-reserve.iml" />
     </modules>
   </component>
 </project>

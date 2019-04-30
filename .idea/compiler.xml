@@ -6,11 +6,11 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="zooKeeper" />
+        <module name="game-reserve" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="zooKeeper" target="8" />
+      <module name="game-reserve" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>
