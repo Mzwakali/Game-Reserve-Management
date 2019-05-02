@@ -1,8 +1,8 @@
 package ac.za.cput.domain.Employee;
 
-public class FieldGuide {
+public class FieldGuide extends Employee{
 
-    private int guideId;
+    /*private int guideId;
     private String firstName, lastName, title;
 
     public FieldGuide() {
@@ -29,7 +29,7 @@ public class FieldGuide {
             this.firstName = firstName;
             return this;
         }
-    }
+    }*/
 }
 
 

@@ -37,7 +37,7 @@ public class LocalVisitor extends Visitor {
 
         @Override
         public String toString() {
-            return "LocalVisitorBuilder{" +
+            return "InternationalVisitorBuilder{" +
                     "booking=" + booking +
                     '}' +super.toString();
         }

@@ -9,7 +9,7 @@ public class WildlifeRangerRepositoryImp implements WildlifeRangerRepository {
     private static WildlifeRangerRepositoryImp wildlifeRangerRepo = null;
     private Set<WildlifeRanger> wildlifeRangers;
 
-    public WildlifeRangerRepositoryImp getRepository(){
+    public static WildlifeRangerRepositoryImp getRepository(){
         if (wildlifeRangerRepo == null){
             return new WildlifeRangerRepositoryImp();
         }
