@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="155ce6ba-0403-4d8a-8780-a63cfe37bf07" name="Default Changelist" comment="Added service and respective Imp">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ac/za/cput/repository/VisitorRepository/Imp/LocalVisitorRepositoryImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ac/za/cput/service/EmployeeService/Imp/FieldGuideServiceImp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ac/za/cput/service/EmployeeService/SecurityService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ac/za/cput/domain/Employee/FieldGuide.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ac/za/cput/domain/Employee/FieldGuide.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ac/za/cput/domain/Visitor/InternationalVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ac/za/cput/domain/Visitor/InternationalVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ac/za/cput/domain/Visitor/LocalVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ac/za/cput/domain/Visitor/LocalVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ac/za/cput/repository/EmployeeRepository/FieldGuideRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ac/za/cput/repository/EmployeeRepository/FieldGuideRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ac/za/cput/repository/EmployeeRepository/Imp/WildlifeRangerRepositoryImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ac/za/cput/repository/EmployeeRepository/Imp/WildlifeRangerRepositoryImp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ac/za/cput/repository/VisitorRepository/CarePackageRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ac/za/cput/repository/VisitorRepository/InternationalVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ac/za/cput/repository/VisitorRepository/InternationalVisitorRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ac/za/cput/repository/VisitorRepository/LocalVisitorRepositry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ac/za/cput/repository/VisitorRepository/LocalVisitorRepositry.java" afterDir="false" />
-    </list>
+    <list default="true" id="155ce6ba-0403-4d8a-8780-a63cfe37bf07" name="Default Changelist" comment="Added service and respective Imp" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -273,7 +260,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556821302243" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556832689530" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -421,7 +408,7 @@
       <workItem from="1556659046740" duration="1274000" />
       <workItem from="1556740938349" duration="2926000" />
       <workItem from="1556809221649" duration="9970000" />
-      <workItem from="1556829492540" duration="2172000" />
+      <workItem from="1556829492540" duration="2753000" />
     </task>
     <task id="LOCAL-00001" summary="Added service and respective Imp">
       <created>1556613448124</created>
@@ -480,7 +467,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78685000" />
+    <option name="totallyTimeSpent" value="79266000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="7" />
