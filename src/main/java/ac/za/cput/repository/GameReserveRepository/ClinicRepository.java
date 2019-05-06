@@ -5,7 +5,7 @@ import ac.za.cput.repository.InterfaceRepository;
 
 import java.util.Set;
 
-public interface ClinicRepository extends InterfaceRepository<Clinic, String> {
+public interface ClinicRepository extends InterfaceRepository<Clinic, Integer> {
 
     Set<Clinic> getAll();
 }

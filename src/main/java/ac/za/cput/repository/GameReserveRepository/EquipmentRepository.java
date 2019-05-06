@@ -5,7 +5,7 @@ import ac.za.cput.repository.InterfaceRepository;
 
 import java.util.Set;
 
-public interface EquipmentRepository extends InterfaceRepository<Equipment, String> {
+public interface EquipmentRepository extends InterfaceRepository<Equipment, Integer> {
 
     Set<Equipment> getAll();
 }

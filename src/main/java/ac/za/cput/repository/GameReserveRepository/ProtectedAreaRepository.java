@@ -5,7 +5,7 @@ import ac.za.cput.repository.InterfaceRepository;
 
 import java.util.Set;
 
-public interface ProtectedAreaRepository extends InterfaceRepository<ProtectedArea, String> {
+public interface ProtectedAreaRepository extends InterfaceRepository<ProtectedArea, Integer> {
 
     Set<ProtectedArea> getAll();
 }
