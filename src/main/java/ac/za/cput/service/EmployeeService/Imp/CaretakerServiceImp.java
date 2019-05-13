@@ -4,9 +4,10 @@ import ac.za.cput.service.EmployeeService.CaretakerService;
 import ac.za.cput.domain.Employee.Caretaker;
 import ac.za.cput.repository.EmployeeRepository.CaretakerRepository;
 import ac.za.cput.repository.EmployeeRepository.Imp.CaretakerRepositoryImp;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class CaretakerServiceImp implements CaretakerService {
 
     private static CaretakerServiceImp caretakerService = null;

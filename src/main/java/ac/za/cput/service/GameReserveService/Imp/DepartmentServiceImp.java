@@ -4,9 +4,10 @@ import ac.za.cput.domain.GameReserve.Department;
 import ac.za.cput.repository.GameReserveRepository.DepartmentRepository;
 import ac.za.cput.repository.GameReserveRepository.Imp.DepartmentRepositoryImp;
 import ac.za.cput.service.GameReserveService.DepartmentService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
+@Service
 public class DepartmentServiceImp implements DepartmentService {
     private static DepartmentServiceImp departmentService = null;
     private DepartmentRepository repository;
