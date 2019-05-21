@@ -1,13 +1,14 @@
 package ac.za.cput.domain.gameReserve;
 
+import java.util.List;
 import java.util.Set;
 
 public class ProtectedArea {
 
     private int areaId;
-    private Set<Department> departments;
+    private List<Department> departments;
 
-    public ProtectedArea() {
+    public ProtectedArea(ProtectedAreaBuilder protectedAreaBuilder) {
     }
 
     public int getAreaId() {
@@ -18,19 +19,40 @@ public class ProtectedArea {
         this.areaId = areaId;
     }
 
-    public Set<Department> getDepartments() {
+    public List<Department> getDepartments() {
         return departments;
     }
 
-    public void setDepartments(Set<Department> departments) {
+    public void setDepartments(List<Department> departments) {
         this.departments = departments;
     }
 
-    @Override
-    public String toString() {
-        return "ProtectedArea{" +
-                "areaId=" + areaId +
-                ", departments=" + departments +
-                '}';
+    public static class ProtectedAreaBuilder {
+        private int areaId;
+        private List<Department> departments;
+
+        public ProtectedAreaBuilder() {
+        }
+
+        public ProtectedAreaBuilder areaId(int areaId) {
+            this.areaId = areaId;
+            return this;
+        }
+
+        public ProtectedAreaBuilder department(List<Department> departments) {
+            this.departments = departments;
+            return this;
+        }
+        public ProtectedArea build(){
+            return new ProtectedArea(this);
+        }
+
+        @Override
+        public String toString() {
+            return "ProtectedAreaBuilder{" +
+                    "areaId=" + areaId +
+                    ", departments=" + departments +
+                    '}';
+        }
     }
 }

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Set;
 
 @RestController
-@RequestMapping("/visitor/locals")
+@RequestMapping("/visitor/localVisitor")
 public class LocalVisitorController {
 
     @Autowired

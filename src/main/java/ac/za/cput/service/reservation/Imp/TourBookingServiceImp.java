@@ -4,14 +4,16 @@ import ac.za.cput.domain.reservation.TourBooking;
 import ac.za.cput.repository.reservation.Imp.TourBookingRepositoryImp;
 import ac.za.cput.repository.reservation.TourBookingRepository;
 import ac.za.cput.service.reservation.TourBookingService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class TourBookingServiceImp implements TourBookingService {
     private static TourBookingServiceImp tourBookingService = null;
     private TourBookingRepository repository;
 
-    private TourBookingServiceImp(){
+    TourBookingServiceImp(){
         this.repository = TourBookingRepositoryImp.getBookingRepository();
     }
 

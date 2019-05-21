@@ -12,7 +12,7 @@ public class WildlifeRangerServiceImp implements WildlifeRangerService {
     private static WildlifeRangerServiceImp wildlifeRangerService = null;
     private WildlifeRangerRepository repository;
 
-    private WildlifeRangerServiceImp(){
+    WildlifeRangerServiceImp(){
         this.repository = WildlifeRangerRepositoryImp.getRepository();
     }
 

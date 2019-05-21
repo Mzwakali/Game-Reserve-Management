@@ -4,14 +4,16 @@ import ac.za.cput.domain.gameReserve.Equipment;
 import ac.za.cput.repository.gameReserve.EquipmentRepository;
 import ac.za.cput.repository.gameReserve.Imp.EquipmentRepositoryImp;
 import ac.za.cput.service.gameReserve.EquipmentService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class EquipmentServiceImp implements EquipmentService {
     private static EquipmentServiceImp equipmentService = null;
     private EquipmentRepository repository;
 
-    private EquipmentServiceImp(){
+    EquipmentServiceImp(){
         this.repository = EquipmentRepositoryImp.getEquipmentRepository();
     }
 

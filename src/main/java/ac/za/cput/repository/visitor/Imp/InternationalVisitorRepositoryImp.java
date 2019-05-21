@@ -2,12 +2,14 @@ package ac.za.cput.repository.visitor.Imp;
 
 import ac.za.cput.domain.visitor.InternationalVisitor;
 import ac.za.cput.repository.visitor.InternationalVisitorRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+@Repository
 public class InternationalVisitorRepositoryImp implements InternationalVisitorRepository {
     private static InternationalVisitorRepositoryImp internationalVisitorRepo = null;
     private Map<Integer, InternationalVisitor> internationalVisitors;

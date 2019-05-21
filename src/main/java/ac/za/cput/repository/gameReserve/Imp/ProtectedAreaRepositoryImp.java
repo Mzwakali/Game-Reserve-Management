@@ -2,12 +2,14 @@ package ac.za.cput.repository.gameReserve.Imp;
 
 import ac.za.cput.domain.gameReserve.ProtectedArea;
 import ac.za.cput.repository.gameReserve.ProtectedAreaRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+@Repository
 public class ProtectedAreaRepositoryImp implements ProtectedAreaRepository {
     private static ProtectedAreaRepositoryImp protectedAreaRepository = null;
     private Map<Integer, ProtectedArea> protectedAreas;

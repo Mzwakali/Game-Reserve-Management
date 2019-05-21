@@ -4,14 +4,16 @@ import ac.za.cput.service.visitor.VisitorService;
 import ac.za.cput.domain.visitor.Visitor;
 import ac.za.cput.repository.visitor.Imp.VisitorRepositoryImpl;
 import ac.za.cput.repository.visitor.VisitorRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class VisitorServiceImp implements VisitorService {
     private static VisitorServiceImp visitorService = null;
     private VisitorRepository repository;
 
-    private VisitorServiceImp(){
+    VisitorServiceImp(){
         this.repository = VisitorRepositoryImpl.getRepository();
     }
 

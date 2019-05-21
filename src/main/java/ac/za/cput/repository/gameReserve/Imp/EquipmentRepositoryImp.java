@@ -2,12 +2,14 @@ package ac.za.cput.repository.gameReserve.Imp;
 
 import ac.za.cput.domain.gameReserve.Equipment;
 import ac.za.cput.repository.gameReserve.EquipmentRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+@Repository
 public class EquipmentRepositoryImp implements EquipmentRepository {
     private static EquipmentRepositoryImp equipmentRepository = null;
     private Map<Integer, Equipment> equipment;

@@ -12,7 +12,7 @@ public class LocalVisitorServiceImp implements LocalVisitorService {
     private static LocalVisitorServiceImp localVisitorService = null;
     private LocalVisitorRepositry repository;
 
-    private LocalVisitorServiceImp(){
+    protected LocalVisitorServiceImp(){
         this.repository = LocalVisitorRepositoryImp.getLocalVisitorRepository();
     }
 

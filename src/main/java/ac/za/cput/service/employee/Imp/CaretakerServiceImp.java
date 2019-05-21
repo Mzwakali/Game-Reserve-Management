@@ -13,7 +13,7 @@ public class CaretakerServiceImp implements CaretakerService {
     private static CaretakerServiceImp caretakerService = null;
     private CaretakerRepository repository;
 
-    private CaretakerServiceImp(){
+    CaretakerServiceImp(){
         this.repository = CaretakerRepositoryImp.getRepository();
     }
 

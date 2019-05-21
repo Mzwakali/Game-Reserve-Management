@@ -12,7 +12,7 @@ public class DepartmentServiceImp implements DepartmentService {
     private static DepartmentServiceImp departmentService = null;
     private DepartmentRepository repository;
 
-    private DepartmentServiceImp(){
+    DepartmentServiceImp(){
         this.repository = DepartmentRepositoryImp.getDepartmentRepository();
     }
 

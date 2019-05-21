@@ -2,12 +2,14 @@ package ac.za.cput.repository.gameReserve.Imp;
 
 import ac.za.cput.domain.gameReserve.Clinic;
 import ac.za.cput.repository.gameReserve.ClinicRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+@Repository
 public class ClinicRepositoryImp implements ClinicRepository {
     private static ClinicRepositoryImp clinicRepository = null;
     private Map<Integer, Clinic> clinics;

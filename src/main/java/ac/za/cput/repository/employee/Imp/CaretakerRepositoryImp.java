@@ -2,12 +2,14 @@ package ac.za.cput.repository.employee.Imp;
 
 import ac.za.cput.domain.employee.Caretaker;
 import ac.za.cput.repository.employee.CaretakerRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+@Repository
 public class CaretakerRepositoryImp implements CaretakerRepository {
 
     private static CaretakerRepositoryImp caretakerRepo = null;

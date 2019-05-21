@@ -2,12 +2,14 @@ package ac.za.cput.repository.employee.Imp;
 
 import ac.za.cput.domain.employee.WildlifeRanger;
 import ac.za.cput.repository.employee.WildlifeRangerRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+@Repository
 public class WildlifeRangerRepositoryImp implements WildlifeRangerRepository {
     private static WildlifeRangerRepositoryImp wildlifeRangerRepo = null;
     private Map<Integer, WildlifeRanger> wildlifeRangers;

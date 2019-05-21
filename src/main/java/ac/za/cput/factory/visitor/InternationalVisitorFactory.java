@@ -5,9 +5,9 @@ import ac.za.cput.domain.visitor.InternationalVisitor;
 
 public class InternationalVisitorFactory {
 
-    public static InternationalVisitor getInternationalVisitor(TourBooking booking){
+    public static InternationalVisitor getInternationalVisitor(String booking){
         return (InternationalVisitor) new InternationalVisitor.InternationalVisitorBuilder()
-                .booking(booking)
+                //.booking(booking)
                 .build();
 
     }

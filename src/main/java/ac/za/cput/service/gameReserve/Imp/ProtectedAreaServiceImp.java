@@ -4,14 +4,16 @@ import ac.za.cput.domain.gameReserve.ProtectedArea;
 import ac.za.cput.repository.gameReserve.Imp.ProtectedAreaRepositoryImp;
 import ac.za.cput.repository.gameReserve.ProtectedAreaRepository;
 import ac.za.cput.service.gameReserve.ProtectedAreaService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class ProtectedAreaServiceImp implements ProtectedAreaService {
     private static ProtectedAreaServiceImp protectedAreaService = null;
     private ProtectedAreaRepository repository;
 
-    private ProtectedAreaServiceImp(){
+    ProtectedAreaServiceImp(){
         this.repository = ProtectedAreaRepositoryImp.getProtectedAreaRepository();
     }
 

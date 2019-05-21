@@ -13,7 +13,7 @@ public class ClinicDocServiceImp implements ClinicDocService {
     private static ClinicDocServiceImp clinicDocService = null;
     private ClinicDocRepository repository;
 
-    private ClinicDocServiceImp(){
+    ClinicDocServiceImp(){
         this.repository = ClinicDocRepositoryImp.getRepository();
     }
 

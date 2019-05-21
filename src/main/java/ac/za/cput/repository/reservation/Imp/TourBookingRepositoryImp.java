@@ -2,12 +2,14 @@ package ac.za.cput.repository.reservation.Imp;
 
 import ac.za.cput.domain.reservation.TourBooking;
 import ac.za.cput.repository.reservation.TourBookingRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+@Repository
 public class TourBookingRepositoryImp implements TourBookingRepository {
     private static TourBookingRepositoryImp bookingRepository = null;
     private Map<Integer, TourBooking> bookings;

@@ -2,12 +2,14 @@ package ac.za.cput.repository.employee.Imp;
 
 import ac.za.cput.domain.employee.ClinicDoc;
 import ac.za.cput.repository.employee.ClinicDocRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+@Repository
 public class ClinicDocRepositoryImp implements ClinicDocRepository {
     private static ClinicDocRepositoryImp clinicDocRepository = null;
     private Map<Integer, ClinicDoc> clinicDocs;

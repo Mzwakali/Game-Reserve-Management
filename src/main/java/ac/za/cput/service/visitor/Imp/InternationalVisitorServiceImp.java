@@ -4,14 +4,16 @@ import ac.za.cput.domain.visitor.InternationalVisitor;
 import ac.za.cput.repository.visitor.Imp.InternationalVisitorRepositoryImp;
 import ac.za.cput.repository.visitor.InternationalVisitorRepository;
 import ac.za.cput.service.visitor.InternationalVisitorService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class InternationalVisitorServiceImp implements InternationalVisitorService {
     private static InternationalVisitorServiceImp internationalVisitorService = null;
     private InternationalVisitorRepository repository;
 
-    private InternationalVisitorServiceImp(){
+    InternationalVisitorServiceImp(){
         this.repository = InternationalVisitorRepositoryImp.getInternationalVisitorRepo();
     }
 

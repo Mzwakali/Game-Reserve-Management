@@ -1,5 +1,6 @@
 package ac.za.cput.factory.employee;
 
+import ac.za.cput.domain.employee.ClinicDoc;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -14,6 +15,7 @@ public class ClinicDocFactoryTest {
 
     @Test
     public void getClinicDoc() {
-        Assert.assertNull(null);
+        ClinicDoc clinicDoc = ClinicDocFactory.getClinicDoc("Jack","Black","Vet");
+        Assert.assertNotNull(clinicDoc.getEmpId());
     }
 }

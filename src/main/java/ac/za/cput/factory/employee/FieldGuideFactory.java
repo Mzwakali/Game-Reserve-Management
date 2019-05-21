@@ -9,11 +9,11 @@ import java.util.List;
 
 public class FieldGuideFactory {
 
-    public static FieldGuide getGuide(int guideId, TourBooking booking, Visitor visitor, List<Department> departments) {
+    public static FieldGuide getGuide(int guideId, String booking, String visitor) {
         return new FieldGuide.FieldGuideBuilder()
                 .guideId(guideId)
-                .booking(booking)
-                .department(departments)
+                //.booking(booking)
+                //.department(departments)
                 .build();
     }
 }

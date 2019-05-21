@@ -6,11 +6,11 @@ import ac.za.cput.util.Misc;
 
 public class TourBookingFactory {
 
-    public static TourBooking getBooking(int bookingId, String tourDate, Visitor visitor){
+    public static TourBooking getBooking(int bookingId, String tourDate, String visitor){
         return new TourBooking.TourBookingBuilder()
                 .bookingId(Misc.generateId())
                 .tourDate(tourDate)
-                .visitor(visitor)
+                //.visitor(visitor)
                 .build();
     }
 }

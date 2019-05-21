@@ -20,7 +20,7 @@ public class VisitorFactoryTest {
         Employee employee = CareTakerFactory.getCareTaker("Joseph", "Mosenga","Marine_Guide",35);
         Visitor visitor;
         //FieldGuide guide;
-        //visitor = VisitorFactory.getVisitor(Misc.generateId(), firstName, lastName, cellphone);
+        //visitor = VisitorFactory.getVisitor(Misc.generateId(), firstName, lastName, cellphone,);
         // Assert.assertNotNull();
 
     }

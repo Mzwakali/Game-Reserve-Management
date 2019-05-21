@@ -4,14 +4,16 @@ import ac.za.cput.domain.gameReserve.Clinic;
 import ac.za.cput.repository.gameReserve.ClinicRepository;
 import ac.za.cput.repository.gameReserve.Imp.ClinicRepositoryImp;
 import ac.za.cput.service.gameReserve.ClinicService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class ClinicServiceImp implements ClinicService {
     private static ClinicServiceImp clinicService = null;
     private ClinicRepository repository;
 
-    private ClinicServiceImp(){
+    ClinicServiceImp(){
         this.repository = ClinicRepositoryImp.getRepository();
     }
 

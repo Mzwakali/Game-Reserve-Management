@@ -13,7 +13,7 @@ public class SecurityServiceImp implements SecurityService {
     private static SecurityServiceImp securityService = null;
     private SecurityRepository repository;
 
-    private SecurityServiceImp(){
+    SecurityServiceImp(){
         this.repository = SecurityRepositoryImp.getSecurityRepository();
     }
 

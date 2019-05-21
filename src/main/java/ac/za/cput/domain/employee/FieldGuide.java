@@ -5,6 +5,7 @@ import ac.za.cput.domain.reservation.TourBooking;
 import ac.za.cput.domain.visitor.Visitor;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 public class FieldGuide extends Employee{
@@ -12,7 +13,7 @@ public class FieldGuide extends Employee{
     private int guideId;
     private TourBooking booking;
     private Visitor visitor;
-    private List<Department> departments;
+    private Map<Integer, Department> departments;
 
     public FieldGuide(FieldGuideBuilder fieldGuideBuilder) {
     }
@@ -41,11 +42,11 @@ public class FieldGuide extends Employee{
         this.visitor = visitor;
     }
 
-    public List<Department> getDepartments() {
+    public Map<Integer,Department> getDepartments() {
         return departments;
     }
 
-    public void setDepartments(List<Department> departments) {
+    public void setDepartments(Map<Integer,Department> departments) {
         this.departments = departments;
     }
 
@@ -53,7 +54,7 @@ public class FieldGuide extends Employee{
         private int guideId;
         private TourBooking booking;
         private Visitor visitor;
-        private List<Department> department;
+        private Map<Integer,Department> department;
 
         public FieldGuideBuilder guideId(int guideId){
             this.guideId = guideId;
@@ -69,7 +70,7 @@ public class FieldGuide extends Employee{
             this.visitor = visitor;
             return this;
         }
-        public FieldGuideBuilder department(List<Department> department){
+        public FieldGuideBuilder department(Map<Integer, Department> department){
             this.department = department;
             return this;
         }

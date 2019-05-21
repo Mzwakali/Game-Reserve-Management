@@ -2,12 +2,14 @@ package ac.za.cput.repository.gameReserve.Imp;
 
 import ac.za.cput.domain.gameReserve.Department;
 import ac.za.cput.repository.gameReserve.DepartmentRepository;
+import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+@Repository
 public class DepartmentRepositoryImp implements DepartmentRepository {
     private static DepartmentRepositoryImp departmentRepository = null;
     private Map<Integer, Department> departments;

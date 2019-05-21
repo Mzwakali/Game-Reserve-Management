@@ -13,7 +13,7 @@ public class FieldGuideServiceImp implements FieldGuideService {
     private static FieldGuideServiceImp fieldGuideService = null;
     private FieldGuideRepository repository;
 
-    private FieldGuideServiceImp(){
+    FieldGuideServiceImp(){
         this.repository = FieldGuideRepositoryImp.getFieldGuideRepository();
     }
 

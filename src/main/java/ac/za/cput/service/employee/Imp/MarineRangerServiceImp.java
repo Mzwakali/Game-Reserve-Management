@@ -12,7 +12,7 @@ public class MarineRangerServiceImp implements MarineRangerService {
     private static MarineRangerServiceImp marineRangerService = null;
     private MarineRangerRepository repository;
 
-    private MarineRangerServiceImp(){
+    MarineRangerServiceImp(){
         this.repository = MarineRangerRepositoryImp.getMarineRangerRepository();
     }
 
