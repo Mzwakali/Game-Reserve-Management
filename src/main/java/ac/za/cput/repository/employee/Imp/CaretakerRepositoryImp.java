@@ -9,7 +9,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-@Repository
+@Repository("CaretakerInMemory")
 public class CaretakerRepositoryImp implements CaretakerRepository {
 
     private static CaretakerRepositoryImp caretakerRepo = null;

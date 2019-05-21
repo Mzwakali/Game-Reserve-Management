@@ -9,7 +9,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-@Repository
+@Repository("InternationalVisitorInMemory")
 public class InternationalVisitorRepositoryImp implements InternationalVisitorRepository {
     private static InternationalVisitorRepositoryImp internationalVisitorRepo = null;
     private Map<Integer, InternationalVisitor> internationalVisitors;

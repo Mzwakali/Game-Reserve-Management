@@ -9,7 +9,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-@Repository
+@Repository("EquipmentInMemory")
 public class EquipmentRepositoryImp implements EquipmentRepository {
     private static EquipmentRepositoryImp equipmentRepository = null;
     private Map<Integer, Equipment> equipment;

@@ -9,7 +9,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-@Repository
+@Repository("SecurityInMemory")
 public class SecurityRepositoryImp implements SecurityRepository {
     private static SecurityRepositoryImp securityRepo = null;
     private Map<Integer, Security> securities;

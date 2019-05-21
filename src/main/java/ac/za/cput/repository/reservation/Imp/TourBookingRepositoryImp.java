@@ -9,7 +9,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-@Repository
+@Repository("TourBookingInMemory")
 public class TourBookingRepositoryImp implements TourBookingRepository {
     private static TourBookingRepositoryImp bookingRepository = null;
     private Map<Integer, TourBooking> bookings;

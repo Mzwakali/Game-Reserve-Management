@@ -9,7 +9,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-@Repository
+@Repository("ClinicDocInMemory")
 public class ClinicDocRepositoryImp implements ClinicDocRepository {
     private static ClinicDocRepositoryImp clinicDocRepository = null;
     private Map<Integer, ClinicDoc> clinicDocs;

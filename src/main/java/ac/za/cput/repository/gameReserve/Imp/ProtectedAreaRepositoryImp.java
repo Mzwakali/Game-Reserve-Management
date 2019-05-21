@@ -9,7 +9,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-@Repository
+@Repository("ProtectedAreaInMemory")
 public class ProtectedAreaRepositoryImp implements ProtectedAreaRepository {
     private static ProtectedAreaRepositoryImp protectedAreaRepository = null;
     private Map<Integer, ProtectedArea> protectedAreas;

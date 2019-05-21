@@ -9,7 +9,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-@Repository
+@Repository("MarineRangerInMemory")
 public class MarineRangerRepositoryImp implements MarineRangerRepository {
 
     private static MarineRangerRepositoryImp marineRangerRepo = null;

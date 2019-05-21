@@ -9,7 +9,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-@Repository
+@Repository("FieldGuideInMemory")
 public class FieldGuideRepositoryImp implements FieldGuideRepository {
     private static FieldGuideRepositoryImp fieldGuideRepository = null;
     private Map<Integer, FieldGuide> guides;

@@ -9,7 +9,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-@Repository
+@Repository("LocalVisitorInMemory")
 public class LocalVisitorRepositoryImp implements LocalVisitorRepositry {
     private static LocalVisitorRepositoryImp localVisitorRepository = null;
     private Map<Integer, LocalVisitor> locals;

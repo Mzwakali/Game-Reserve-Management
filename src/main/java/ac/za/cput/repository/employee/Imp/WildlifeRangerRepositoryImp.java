@@ -9,7 +9,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-@Repository
+@Repository("WildlifeRangerInMemory")
 public class WildlifeRangerRepositoryImp implements WildlifeRangerRepository {
     private static WildlifeRangerRepositoryImp wildlifeRangerRepo = null;
     private Map<Integer, WildlifeRanger> wildlifeRangers;

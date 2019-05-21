@@ -9,7 +9,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
-@Repository
+@Repository("DepartmentInMemory")
 public class DepartmentRepositoryImp implements DepartmentRepository {
     private static DepartmentRepositoryImp departmentRepository = null;
     private Map<Integer, Department> departments;
