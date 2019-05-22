@@ -8,7 +8,7 @@ public class TourBookingFactory {
 
     public static TourBooking getBooking(int bookingId, String tourDate, String visitor){
         return new TourBooking.TourBookingBuilder()
-                .bookingId(Misc.generateId())
+                .bookingId(bookingId)
                 .tourDate(tourDate)
                 //.visitor(visitor)
                 .build();
