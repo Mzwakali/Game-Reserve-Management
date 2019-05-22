@@ -1,11 +1,11 @@
-package ac.za.cput.controller.visitor;
+package ac.za.cput.controller.employee;
 
-import ac.za.cput.domain.visitor.LocalVisitor;
-import ac.za.cput.factory.visitor.LocalVisitorFactory;
-import org.junit.Before;
+import ac.za.cput.domain.employee.MarineRanger;
+import ac.za.cput.factory.employee.MarineRangerFactory;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.AutoConfigurationPackage;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.http.*;
@@ -16,48 +16,48 @@ import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
-public class LocalVisitorControllerTest {
+public class MarineRangerControllerTest {
 
     @Autowired
     private TestRestTemplate restTemplate;
 
-    private String originUrl = "http://localhost:8080/visitor/localVisitor";
+    private String originUrl = "http://localhost:8080/employee/marine";
 
     @Test
     public void create() {
-        LocalVisitor visitor = LocalVisitorFactory.getLocalVisitor("Joseph","Mosenga","0842497845");
-        visitor.setVisitorId(visitor.getVisitorId());
+        MarineRanger ranger = MarineRangerFactory.getMarineRanger(2,null);
+        ranger.setRangerId(ranger.getRangerId());
 
-        ResponseEntity<LocalVisitor> responseEntity = restTemplate.postForEntity(originUrl +"/create", visitor, LocalVisitor.class);
+        ResponseEntity<MarineRanger> responseEntity = restTemplate.postForEntity(originUrl +"/create", ranger, MarineRanger.class);
         assertNotNull(responseEntity);
         assertNotNull(responseEntity.getBody());
     }
 
     @Test
     public void find(){
-        LocalVisitor visitor = restTemplate.getForObject(originUrl +"/find/2", LocalVisitor.class);
-        assertNotNull(visitor);
+        MarineRanger ranger = restTemplate.getForObject(originUrl +"/find/2", MarineRanger.class);
+        assertNotNull(ranger);
     }
 
     @Test
     public void update() {
         int id = 2;
-        LocalVisitor visitor = restTemplate.getForObject(originUrl + "/update/" +id, LocalVisitor.class);
-        visitor.setVisitorId(1);
+        MarineRanger ranger = restTemplate.getForObject(originUrl + "/update/" +id, MarineRanger.class);
+        ranger.setRangerId(1);
 
-        restTemplate.put(originUrl +"/update/"+ id, visitor);
-        LocalVisitor visitorUpdate = restTemplate.getForObject(originUrl +"/update/" +id, LocalVisitor.class);
-        assertNotNull(visitorUpdate);
+        restTemplate.put(originUrl +"/update/"+ id, ranger);
+        MarineRanger rangerUpdate = restTemplate.getForObject(originUrl +"/update/" +id, MarineRanger.class);
+        assertNotNull(rangerUpdate);
     }
 
     @Test
     public void delete() {
         int id = 2;
-        LocalVisitor visitor = restTemplate.getForObject(originUrl +"/find/" +id, LocalVisitor.class);
+        MarineRanger ranger = restTemplate.getForObject(originUrl +"/find/" +id, MarineRanger.class);
         restTemplate.delete(originUrl +"/delete/" +id);
 
         try{
-            visitor = restTemplate.getForObject(originUrl +"/find/" +id, LocalVisitor.class);
+            ranger = restTemplate.getForObject(originUrl +"/find/" +id, MarineRanger.class);
         }catch(final HttpClientErrorException x){
             assertEquals(x.getStatusCode(), HttpStatus.NOT_FOUND);
         }

@@ -1,8 +1,7 @@
 package ac.za.cput.controller.visitor;
 
-import ac.za.cput.domain.visitor.LocalVisitor;
-import ac.za.cput.factory.visitor.LocalVisitorFactory;
-import org.junit.Before;
+import ac.za.cput.domain.visitor.InternationalVisitor;
+import ac.za.cput.factory.visitor.InternationalVisitorFactory;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,48 +15,48 @@ import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
-public class LocalVisitorControllerTest {
+public class InternationalVisitorControllerTest {
 
     @Autowired
     private TestRestTemplate restTemplate;
 
-    private String originUrl = "http://localhost:8080/visitor/localVisitor";
+    private String originUrl = "http://localhost:8080/visitor/internationalVisitor";
 
     @Test
     public void create() {
-        LocalVisitor visitor = LocalVisitorFactory.getLocalVisitor("Joseph","Mosenga","0842497845");
+        InternationalVisitor visitor = InternationalVisitorFactory.getInternationalVisitor(null);
         visitor.setVisitorId(visitor.getVisitorId());
 
-        ResponseEntity<LocalVisitor> responseEntity = restTemplate.postForEntity(originUrl +"/create", visitor, LocalVisitor.class);
+        ResponseEntity<InternationalVisitor> responseEntity = restTemplate.postForEntity(originUrl +"/create", visitor, InternationalVisitor.class);
         assertNotNull(responseEntity);
         assertNotNull(responseEntity.getBody());
     }
 
     @Test
     public void find(){
-        LocalVisitor visitor = restTemplate.getForObject(originUrl +"/find/2", LocalVisitor.class);
+        InternationalVisitor visitor = restTemplate.getForObject(originUrl +"/find/2", InternationalVisitor.class);
         assertNotNull(visitor);
     }
 
     @Test
     public void update() {
         int id = 2;
-        LocalVisitor visitor = restTemplate.getForObject(originUrl + "/update/" +id, LocalVisitor.class);
+        InternationalVisitor visitor = restTemplate.getForObject(originUrl + "/update/" +id, InternationalVisitor.class);
         visitor.setVisitorId(1);
 
         restTemplate.put(originUrl +"/update/"+ id, visitor);
-        LocalVisitor visitorUpdate = restTemplate.getForObject(originUrl +"/update/" +id, LocalVisitor.class);
+        InternationalVisitor visitorUpdate = restTemplate.getForObject(originUrl +"/update/" +id, InternationalVisitor.class);
         assertNotNull(visitorUpdate);
     }
 
     @Test
     public void delete() {
         int id = 2;
-        LocalVisitor visitor = restTemplate.getForObject(originUrl +"/find/" +id, LocalVisitor.class);
+        InternationalVisitor visitor = restTemplate.getForObject(originUrl +"/find/" +id, InternationalVisitor.class);
         restTemplate.delete(originUrl +"/delete/" +id);
 
         try{
-            visitor = restTemplate.getForObject(originUrl +"/find/" +id, LocalVisitor.class);
+            visitor = restTemplate.getForObject(originUrl +"/find/" +id, InternationalVisitor.class);
         }catch(final HttpClientErrorException x){
             assertEquals(x.getStatusCode(), HttpStatus.NOT_FOUND);
         }

@@ -1,8 +1,7 @@
-package ac.za.cput.controller.visitor;
+package ac.za.cput.controller.gameReserve;
 
-import ac.za.cput.domain.visitor.LocalVisitor;
-import ac.za.cput.factory.visitor.LocalVisitorFactory;
-import org.junit.Before;
+import ac.za.cput.domain.gameReserve.Clinic;
+import ac.za.cput.factory.gameReserve.ClinicFactory;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,48 +15,48 @@ import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
-public class LocalVisitorControllerTest {
+public class ClinicControllerTest {
 
     @Autowired
     private TestRestTemplate restTemplate;
 
-    private String originUrl = "http://localhost:8080/visitor/localVisitor";
+    private String originUrl = "http://localhost:8080/gameReserve/clinic";
 
     @Test
     public void create() {
-        LocalVisitor visitor = LocalVisitorFactory.getLocalVisitor("Joseph","Mosenga","0842497845");
-        visitor.setVisitorId(visitor.getVisitorId());
+        Clinic clinic = ClinicFactory.getClinic(2,"Domestic Pet Pat",null);
+        clinic.setClinicId(clinic.getClinicId());
 
-        ResponseEntity<LocalVisitor> responseEntity = restTemplate.postForEntity(originUrl +"/create", visitor, LocalVisitor.class);
+        ResponseEntity<Clinic> responseEntity = restTemplate.postForEntity(originUrl +"/create", clinic, Clinic.class);
         assertNotNull(responseEntity);
         assertNotNull(responseEntity.getBody());
     }
 
     @Test
     public void find(){
-        LocalVisitor visitor = restTemplate.getForObject(originUrl +"/find/2", LocalVisitor.class);
-        assertNotNull(visitor);
+        Clinic clinic = restTemplate.getForObject(originUrl +"/find/2", Clinic.class);
+        assertNotNull(clinic);
     }
 
     @Test
     public void update() {
         int id = 2;
-        LocalVisitor visitor = restTemplate.getForObject(originUrl + "/update/" +id, LocalVisitor.class);
-        visitor.setVisitorId(1);
+        Clinic clinic = restTemplate.getForObject(originUrl + "/update/" +id, Clinic.class);
+        clinic.setClinicId(1);
 
-        restTemplate.put(originUrl +"/update/"+ id, visitor);
-        LocalVisitor visitorUpdate = restTemplate.getForObject(originUrl +"/update/" +id, LocalVisitor.class);
-        assertNotNull(visitorUpdate);
+        restTemplate.put(originUrl +"/update/"+ id, clinic);
+        Clinic clinicUpdate = restTemplate.getForObject(originUrl +"/update/" +id, Clinic.class);
+        assertNotNull(clinicUpdate);
     }
 
     @Test
     public void delete() {
         int id = 2;
-        LocalVisitor visitor = restTemplate.getForObject(originUrl +"/find/" +id, LocalVisitor.class);
+        Clinic clinic = restTemplate.getForObject(originUrl +"/find/" +id, Clinic.class);
         restTemplate.delete(originUrl +"/delete/" +id);
 
         try{
-            visitor = restTemplate.getForObject(originUrl +"/find/" +id, LocalVisitor.class);
+            clinic = restTemplate.getForObject(originUrl +"/find/" +id, Clinic.class);
         }catch(final HttpClientErrorException x){
             assertEquals(x.getStatusCode(), HttpStatus.NOT_FOUND);
         }

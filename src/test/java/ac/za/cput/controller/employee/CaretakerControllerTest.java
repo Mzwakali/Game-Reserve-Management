@@ -18,7 +18,7 @@ import org.springframework.web.client.HttpClientErrorException;
 import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 public class CaretakerControllerTest {
 
     @Autowired

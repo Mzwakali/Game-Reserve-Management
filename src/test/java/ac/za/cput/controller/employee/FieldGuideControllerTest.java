@@ -1,11 +1,11 @@
-package ac.za.cput.controller.visitor;
+package ac.za.cput.controller.employee;
 
-import ac.za.cput.domain.visitor.LocalVisitor;
-import ac.za.cput.factory.visitor.LocalVisitorFactory;
-import org.junit.Before;
+import ac.za.cput.domain.employee.FieldGuide;
+import ac.za.cput.factory.employee.FieldGuideFactory;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplicationRunListener;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.http.*;
@@ -16,48 +16,48 @@ import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
-public class LocalVisitorControllerTest {
+public class FieldGuideControllerTest {
 
     @Autowired
     private TestRestTemplate restTemplate;
 
-    private String originUrl = "http://localhost:8080/visitor/localVisitor";
+    private String originUrl = "http://localhost:8080/employee/guide";
 
     @Test
     public void create() {
-        LocalVisitor visitor = LocalVisitorFactory.getLocalVisitor("Joseph","Mosenga","0842497845");
-        visitor.setVisitorId(visitor.getVisitorId());
+        FieldGuide guide = FieldGuideFactory.getGuide(2,"16/06/19","Jacksons");
+        guide.setGuideId(guide.getGuideId());
 
-        ResponseEntity<LocalVisitor> responseEntity = restTemplate.postForEntity(originUrl +"/create", visitor, LocalVisitor.class);
+        ResponseEntity<FieldGuide> responseEntity = restTemplate.postForEntity(originUrl +"/create", guide, FieldGuide.class);
         assertNotNull(responseEntity);
         assertNotNull(responseEntity.getBody());
     }
 
     @Test
     public void find(){
-        LocalVisitor visitor = restTemplate.getForObject(originUrl +"/find/2", LocalVisitor.class);
-        assertNotNull(visitor);
+        FieldGuide guide = restTemplate.getForObject(originUrl +"/find/2", FieldGuide.class);
+        assertNotNull(guide);
     }
 
     @Test
     public void update() {
         int id = 2;
-        LocalVisitor visitor = restTemplate.getForObject(originUrl + "/update/" +id, LocalVisitor.class);
-        visitor.setVisitorId(1);
+        FieldGuide guide = restTemplate.getForObject(originUrl + "/update/" +id, FieldGuide.class);
+        guide.setGuideId(1);
 
-        restTemplate.put(originUrl +"/update/"+ id, visitor);
-        LocalVisitor visitorUpdate = restTemplate.getForObject(originUrl +"/update/" +id, LocalVisitor.class);
-        assertNotNull(visitorUpdate);
+        restTemplate.put(originUrl +"/update/"+ id, guide);
+        FieldGuide guideUpdate = restTemplate.getForObject(originUrl +"/update/" +id, FieldGuide.class);
+        assertNotNull(guideUpdate);
     }
 
     @Test
     public void delete() {
         int id = 2;
-        LocalVisitor visitor = restTemplate.getForObject(originUrl +"/find/" +id, LocalVisitor.class);
+        FieldGuide guide = restTemplate.getForObject(originUrl +"/find/" +id, FieldGuide.class);
         restTemplate.delete(originUrl +"/delete/" +id);
 
         try{
-            visitor = restTemplate.getForObject(originUrl +"/find/" +id, LocalVisitor.class);
+            guide = restTemplate.getForObject(originUrl +"/find/" +id, FieldGuide.class);
         }catch(final HttpClientErrorException x){
             assertEquals(x.getStatusCode(), HttpStatus.NOT_FOUND);
         }
