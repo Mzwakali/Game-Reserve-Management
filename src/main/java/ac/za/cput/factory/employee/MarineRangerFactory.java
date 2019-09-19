@@ -10,7 +10,7 @@ public class MarineRangerFactory {
 
     public static MarineRanger getMarineRanger(int marineRangerId, String department){
         return (MarineRanger) new MarineRanger.MarineRangerBuilder()
-                .rangerId(marineRangerId)
+                .empId(marineRangerId)
                 //.departments(department)
                 //.qualification(qualificationList)
                 .build();

@@ -35,10 +35,10 @@ public class WildlifeRangerRepositoryImpTest {
         wildlifeRangerRepository.create(wildlifeRanger);
 
         WildlifeRanger wildlifeRanger1 = WildlifeRangerFactory.getWildlifeRanger(14,"Jungle", "Zoologist");
-        wildlifeRanger1.setRangerId(wildlifeRanger.getRangerId());
+        wildlifeRanger1.setEmpId(wildlifeRanger.getEmpId());
         wildlifeRangerRepository.update(wildlifeRanger1);
 
-        WildlifeRanger wildlifeRanger2 = wildlifeRangerRepository.read(wildlifeRanger1.getRangerId());
+        WildlifeRanger wildlifeRanger2 = wildlifeRangerRepository.read(wildlifeRanger1.getEmpId());
         Assert.assertEquals(wildlifeRanger1, wildlifeRanger2);
     }
 
@@ -48,9 +48,9 @@ public class WildlifeRangerRepositoryImpTest {
         wildlifeRangerRepository.create(wildlifeRanger);
 
         Assert.assertNotNull(wildlifeRangerRepository.getAll());
-        wildlifeRangerRepository.delete(wildlifeRanger.getRangerId());
+        wildlifeRangerRepository.delete(wildlifeRanger.getEmpId());
 
-        WildlifeRanger wildlifeRanger1 = wildlifeRangerRepository.read(wildlifeRanger.getRangerId());
+        WildlifeRanger wildlifeRanger1 = wildlifeRangerRepository.read(wildlifeRanger.getEmpId());
         Assert.assertNull(wildlifeRanger1);
     }
 
@@ -59,7 +59,7 @@ public class WildlifeRangerRepositoryImpTest {
         WildlifeRanger wildlifeRanger = WildlifeRangerFactory.getWildlifeRanger(14,"Wilderness", "Zoologist");
         wildlifeRangerRepository.create(wildlifeRanger);
 
-        WildlifeRanger onSet = wildlifeRangerRepository.read(wildlifeRanger.getRangerId());
+        WildlifeRanger onSet = wildlifeRangerRepository.read(wildlifeRanger.getEmpId());
         Assert.assertEquals(wildlifeRanger, onSet);
     }
 }

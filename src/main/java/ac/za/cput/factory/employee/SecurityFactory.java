@@ -9,7 +9,7 @@ public class SecurityFactory {
 
     public static Security getSecurity(int securityId ){
         return (Security) new Security.SecurityBuilder()
-                .securityId(securityId)
+                .empId(securityId)
                 //.departments(departments)
                 .build();
     }

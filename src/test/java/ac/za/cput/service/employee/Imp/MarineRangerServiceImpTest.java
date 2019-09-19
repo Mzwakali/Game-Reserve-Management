@@ -36,10 +36,10 @@ public class MarineRangerServiceImpTest {
         Assert.assertNotNull(marineRangerService.getAll());
 
         MarineRanger rangerUpdate = MarineRangerFactory.getMarineRanger(2, "Marine World");
-        rangerUpdate.setRangerId(ranger.getRangerId());
+        rangerUpdate.setEmpId(ranger.getEmpId());
         marineRangerService.update(rangerUpdate);
 
-        MarineRanger ranger1 = marineRangerService.read(rangerUpdate.getRangerId());
+        MarineRanger ranger1 = marineRangerService.read(rangerUpdate.getEmpId());
         Assert.assertEquals(rangerUpdate, ranger1);
     }
 
@@ -49,9 +49,9 @@ public class MarineRangerServiceImpTest {
         marineRangerService.create(ranger);
         Assert.assertNotNull(marineRangerService.getAll());
 
-        marineRangerService.delete(ranger.getRangerId());
+        marineRangerService.delete(ranger.getEmpId());
 
-        MarineRanger excluded = marineRangerService.read(ranger.getRangerId());
+        MarineRanger excluded = marineRangerService.read(ranger.getEmpId());
         Assert.assertNull(excluded);
     }
 
@@ -61,7 +61,7 @@ public class MarineRangerServiceImpTest {
         marineRangerService.create(ranger);
         Assert.assertNotNull(marineRangerService.getAll());
 
-        MarineRanger ranger1 = marineRangerService.read(ranger.getRangerId());
+        MarineRanger ranger1 = marineRangerService.read(ranger.getEmpId());
         Assert.assertEquals(ranger,ranger1);
     }
 }

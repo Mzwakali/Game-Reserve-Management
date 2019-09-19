@@ -36,10 +36,10 @@ public class SecurityServiceImpTest {
         Assert.assertNotNull(securityService.getAll());
 
         Security securityUpdate = SecurityFactory.getSecurity(22);
-        securityUpdate.setSecurityId(security.getSecurityId());
+        securityUpdate.setEmpId(security.getEmpId());
         securityService.update(securityUpdate);
 
-        Security security1 = securityService.read(securityUpdate.getSecurityId());
+        Security security1 = securityService.read(securityUpdate.getEmpId());
         Assert.assertEquals(securityUpdate, security1);
     }
 
@@ -49,9 +49,9 @@ public class SecurityServiceImpTest {
         securityService.create(security);
         Assert.assertNotNull(securityService.getAll());
 
-        securityService.delete(security.getSecurityId());
+        securityService.delete(security.getEmpId());
 
-        Security excluded = securityService.read(security.getSecurityId());
+        Security excluded = securityService.read(security.getEmpId());
         Assert.assertNull(excluded);
     }
 
@@ -61,7 +61,7 @@ public class SecurityServiceImpTest {
         securityService.create(security);
         Assert.assertNotNull(securityService.getAll());
 
-        Security security1 = securityService.read(security.getSecurityId());
+        Security security1 = securityService.read(security.getEmpId());
         Assert.assertEquals(security,security1);
     }
 }

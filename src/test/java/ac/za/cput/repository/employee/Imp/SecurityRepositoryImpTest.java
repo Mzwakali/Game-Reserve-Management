@@ -35,10 +35,10 @@ public class SecurityRepositoryImpTest {
         securityRepository.create(security);
 
         Security security1 = SecurityFactory.getSecurity(55);
-        security1.setSecurityId(security.getSecurityId());
+        security1.setEmpId(security.getEmpId());
         securityRepository.update(security1);
 
-        Security security2 = securityRepository.read(security1.getSecurityId());
+        Security security2 = securityRepository.read(security1.getEmpId());
         Assert.assertEquals(security1, security2);
     }
 
@@ -48,9 +48,9 @@ public class SecurityRepositoryImpTest {
         securityRepository.create(security);
 
         Assert.assertNotNull(securityRepository.getAll());
-        securityRepository.delete(security.getSecurityId());
+        securityRepository.delete(security.getEmpId());
 
-        Security security1 = securityRepository.read(security.getSecurityId());
+        Security security1 = securityRepository.read(security.getEmpId());
         Assert.assertNull(security1);
     }
 
@@ -59,7 +59,7 @@ public class SecurityRepositoryImpTest {
         Security security = SecurityFactory.getSecurity(23);
         securityRepository.create(security);
 
-        Security onSet = securityRepository.read(security.getSecurityId());
+        Security onSet = securityRepository.read(security.getEmpId());
         Assert.assertEquals(security, onSet);
     }
 }

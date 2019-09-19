@@ -10,7 +10,7 @@ public class WildlifeRangerFactory {
 
     public static WildlifeRanger getWildlifeRanger(int wildlifeRangerId, String department, String qualification){
         return (WildlifeRanger) new WildlifeRanger.WildlifeRangerBuilder()
-                .rangerId(wildlifeRangerId)
+                .empId(wildlifeRangerId)
                 //.departments(department)
                 //.qualification(qualifications)
                 .build();

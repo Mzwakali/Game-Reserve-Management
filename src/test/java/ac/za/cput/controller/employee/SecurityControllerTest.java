@@ -25,7 +25,7 @@ public class SecurityControllerTest {
     @Test
     public void create() {
         Security security = SecurityFactory.getSecurity(2);
-        security.setSecurityId(security.getSecurityId());
+        security.setEmpId(security.getEmpId());
 
         ResponseEntity<Security> responseEntity = restTemplate.postForEntity(originUrl +"/create", security, Security.class);
         assertNotNull(responseEntity);
@@ -42,7 +42,7 @@ public class SecurityControllerTest {
     public void update() {
         int id = 2;
         Security security = restTemplate.getForObject(originUrl + "/update/" +id, Security.class);
-        security.setSecurityId(1);
+        security.setEmpId(1);
 
         restTemplate.put(originUrl +"/update/"+ id, security);
         Security securityUpdate = restTemplate.getForObject(originUrl +"/update/" +id, Security.class);

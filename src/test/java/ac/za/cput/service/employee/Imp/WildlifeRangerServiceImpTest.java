@@ -36,10 +36,10 @@ public class WildlifeRangerServiceImpTest {
         Assert.assertNotNull(wildlifeRangerService.getAll());
 
         WildlifeRanger rangerUpdate = WildlifeRangerFactory.getWildlifeRanger(2, "Jurassic World", "Jungle Book");
-        rangerUpdate.setRangerId(ranger.getRangerId());
+        rangerUpdate.setEmpId(ranger.getEmpId());
         wildlifeRangerService.update(rangerUpdate);
 
-        WildlifeRanger ranger1 = wildlifeRangerService.read(rangerUpdate.getRangerId());
+        WildlifeRanger ranger1 = wildlifeRangerService.read(rangerUpdate.getEmpId());
         Assert.assertEquals(rangerUpdate, ranger1);
     }
 
@@ -49,9 +49,9 @@ public class WildlifeRangerServiceImpTest {
         wildlifeRangerService.create(ranger);
         Assert.assertNotNull(wildlifeRangerService.getAll());
 
-        wildlifeRangerService.delete(ranger.getRangerId());
+        wildlifeRangerService.delete(ranger.getEmpId());
 
-        WildlifeRanger excluded = wildlifeRangerService.read(ranger.getRangerId());
+        WildlifeRanger excluded = wildlifeRangerService.read(ranger.getEmpId());
         Assert.assertNull(excluded);
     }
 
@@ -61,7 +61,7 @@ public class WildlifeRangerServiceImpTest {
         wildlifeRangerService.create(ranger);
         Assert.assertNotNull(wildlifeRangerService.getAll());
 
-        WildlifeRanger ranger1 = wildlifeRangerService.read(ranger.getRangerId());
+        WildlifeRanger ranger1 = wildlifeRangerService.read(ranger.getEmpId());
         Assert.assertEquals(ranger,ranger1);
     }
 }

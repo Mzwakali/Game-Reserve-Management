@@ -26,7 +26,7 @@ public class MarineRangerControllerTest {
     @Test
     public void create() {
         MarineRanger ranger = MarineRangerFactory.getMarineRanger(2,null);
-        ranger.setRangerId(ranger.getRangerId());
+        ranger.setEmpId(ranger.getEmpId());
 
         ResponseEntity<MarineRanger> responseEntity = restTemplate.postForEntity(originUrl +"/create", ranger, MarineRanger.class);
         assertNotNull(responseEntity);
@@ -43,7 +43,7 @@ public class MarineRangerControllerTest {
     public void update() {
         int id = 2;
         MarineRanger ranger = restTemplate.getForObject(originUrl + "/update/" +id, MarineRanger.class);
-        ranger.setRangerId(1);
+        ranger.setEmpId(1);
 
         restTemplate.put(originUrl +"/update/"+ id, ranger);
         MarineRanger rangerUpdate = restTemplate.getForObject(originUrl +"/update/" +id, MarineRanger.class);

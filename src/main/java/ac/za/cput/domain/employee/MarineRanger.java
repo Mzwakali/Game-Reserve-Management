@@ -6,7 +6,7 @@ import java.util.*;
 
 public class MarineRanger extends Ranger{
 
-    private int rangerId;
+   // private int rangerId;
     private List<Qualification> qualificationList;
     private List<Department> departments;
 
@@ -16,18 +16,18 @@ public class MarineRanger extends Ranger{
 
     public MarineRanger(MarineRangerBuilder builder){
         super(builder);
-        this.rangerId = builder.rangerId;
+       // this.rangerId = builder.rangerId;
         this.departments = builder.departments;
         this.qualificationList = builder.qualificationList;
     }
 
-    public int getRangerId() {
+   /* public int getRangerId() {
         return rangerId;
     }
 
     public void setRangerId(int rangerId) {
         this.rangerId = rangerId;
-    }
+    }*/
 
     public List<Qualification> getQualificationList() {
         return qualificationList;
@@ -45,7 +45,7 @@ public class MarineRanger extends Ranger{
         this.departments = departments;
     }
     public static class MarineRangerBuilder extends Ranger.Builder{
-        private int rangerId;
+        //private int rangerId;
         private List<Department> departments;
         private List<Qualification> qualificationList;
 
@@ -53,10 +53,10 @@ public class MarineRanger extends Ranger{
             super();
         }
 
-        public MarineRangerBuilder rangerId(int rangerId){
+       /* public MarineRangerBuilder rangerId(int rangerId){
             this.rangerId = rangerId;
             return this;
-        }
+        }*/
 
         public MarineRangerBuilder departments(List<Department> departments){
             this.departments = departments;

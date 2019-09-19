@@ -25,7 +25,7 @@ public class WildlifeRangerControllerTest {
     @Test
     public void create() {
         WildlifeRanger ranger = WildlifeRangerFactory.getWildlifeRanger(2,"Jurassic Park","Zoologist");
-        ranger.setRangerId(ranger.getRangerId());
+        ranger.setEmpId(ranger.getEmpId());
 
         ResponseEntity<WildlifeRanger> responseEntity = restTemplate.postForEntity(originUrl +"/create", ranger, WildlifeRanger.class);
         assertNotNull(responseEntity);
@@ -42,7 +42,7 @@ public class WildlifeRangerControllerTest {
     public void update() {
         int id = 2;
         WildlifeRanger ranger = restTemplate.getForObject(originUrl + "/update/" +id, WildlifeRanger.class);
-        ranger.setRangerId(1);
+        ranger.setEmpId(1);
 
         restTemplate.put(originUrl +"/update/"+ id, ranger);
         WildlifeRanger rangerUpdate = restTemplate.getForObject(originUrl +"/update/" +id, WildlifeRanger.class);

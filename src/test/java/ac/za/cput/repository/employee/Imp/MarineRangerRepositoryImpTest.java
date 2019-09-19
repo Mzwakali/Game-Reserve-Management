@@ -6,6 +6,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -15,8 +16,8 @@ import static org.junit.Assert.*;
 @SpringBootTest
 public class MarineRangerRepositoryImpTest {
 
+    @Autowired
     MarineRangerRepositoryImp marineRangerRepository;
-
 
     @Before
     public void setUp() throws Exception {
@@ -36,10 +37,10 @@ public class MarineRangerRepositoryImpTest {
         marineRangerRepository.create(marineRanger);
 
         MarineRanger marineRanger1 = MarineRangerFactory.getMarineRanger(14,"Marine World");
-        marineRanger1.setRangerId(marineRanger.getRangerId());
+        marineRanger1.setEmpId(marineRanger.getEmpId());
         marineRangerRepository.update(marineRanger1);
 
-        MarineRanger marineRanger2 = marineRangerRepository.read(marineRanger1.getRangerId());
+        MarineRanger marineRanger2 = marineRangerRepository.read(marineRanger1.getEmpId());
         Assert.assertEquals(marineRanger1, marineRanger2);
     }
 
@@ -49,9 +50,9 @@ public class MarineRangerRepositoryImpTest {
         marineRangerRepository.create(marineRanger);
 
         Assert.assertNotNull(marineRangerRepository.getAll());
-        marineRangerRepository.delete(marineRanger.getRangerId());
+        marineRangerRepository.delete(marineRanger.getEmpId());
 
-        MarineRanger marineRanger1 = marineRangerRepository.read(marineRanger.getRangerId());
+        MarineRanger marineRanger1 = marineRangerRepository.read(marineRanger.getEmpId());
         Assert.assertNull(marineRanger1);
     }
 
@@ -60,7 +61,7 @@ public class MarineRangerRepositoryImpTest {
         MarineRanger marineRanger = MarineRangerFactory.getMarineRanger(14,"Aqua");
         marineRangerRepository.create(marineRanger);
 
-        MarineRanger onSet = marineRangerRepository.read(marineRanger.getRangerId());
+        MarineRanger onSet = marineRangerRepository.read(marineRanger.getEmpId());
         Assert.assertEquals(marineRanger, onSet);
     }
 }
