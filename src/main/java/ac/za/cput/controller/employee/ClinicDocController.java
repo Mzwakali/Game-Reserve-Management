@@ -3,18 +3,19 @@ package ac.za.cput.controller.employee;
 import ac.za.cput.domain.employee.ClinicDoc;
 import ac.za.cput.service.employee.Imp.ClinicDocServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Set;
 
 @RestController
-@RequestMapping("/employee/doc")
+@RequestMapping("/game-reserve-management/employee/doc")
 public class ClinicDocController {
 
     @Autowired
     private ClinicDocServiceImp clinicDocService;
 
-    @PostMapping
+    @PostMapping(value = "/create", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ResponseBody
     public ClinicDoc create(ClinicDoc doc){
         return clinicDocService.create(doc);

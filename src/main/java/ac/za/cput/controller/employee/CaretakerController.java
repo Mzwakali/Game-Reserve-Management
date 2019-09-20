@@ -4,18 +4,19 @@ import ac.za.cput.domain.employee.Caretaker;
 import ac.za.cput.service.employee.CaretakerService;
 import ac.za.cput.service.employee.Imp.CaretakerServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Set;
 
 @RestController
-@RequestMapping("/employee/caretaker")
+@RequestMapping("/game-reserve-management/employee/caretaker")
 public class CaretakerController {
 
     @Autowired
     private CaretakerServiceImp service;
 
-    @PostMapping("/create")
+    @PostMapping(value = "/create", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ResponseBody
     public Caretaker create(Caretaker caretaker){
         return service.create(caretaker);

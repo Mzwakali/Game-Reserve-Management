@@ -14,25 +14,36 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
+    private static final String USER_ROLE = "USERs";
+    private static final String ADMIN_ROLE = "SystemAdmin";
+
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth
                 .inMemoryAuthentication()
-                .withUser("admin").password(passwordEncoder().encode("pass")).roles("ADMIN")
+                .withUser("user")
+                .password(passwordEncoder().encode("pass"))
+                .roles(USER_ROLE)
                 .and()
-                .withUser("sysadmin").password(passwordEncoder().encode("syspass")).roles("SystemAdmin");
+                .withUser("sysadmin")
+                .password(passwordEncoder().encode("syspass"))
+                .roles(ADMIN_ROLE);
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
+                .httpBasic()
+                .and()
                 .authorizeRequests()
                 //.anyRequest().authenticated()
-                .antMatchers(HttpMethod.GET, "indexController").authenticated()
-                .antMatchers("employee/**").hasRole("ADMIN")
-                .antMatchers("reservation/**").hasAnyRole("ADMIN", "Sysadmin")
+                //.antMatchers(HttpMethod.GET, "indexController").authenticated()
+                .antMatchers(HttpMethod.GET,"game-reserve-management/**/create/**")
+                .hasRole(ADMIN_ROLE)
+                //.antMatchers("reservation/**").hasAnyRole("USERs", "Sysadmin")
                 .and()
-                .httpBasic();
+                .csrf().disable()
+                .formLogin().disable();
     }
 
     @Bean

@@ -14,7 +14,7 @@ public class InternationalVisitorRepositoryImp implements InternationalVisitorRe
     private static InternationalVisitorRepositoryImp internationalVisitorRepo = null;
     private Map<Integer, InternationalVisitor> internationalVisitors;
 
-    private InternationalVisitorRepositoryImp(){
+    public InternationalVisitorRepositoryImp(){
         this.internationalVisitors = new HashMap<>();
     }
 

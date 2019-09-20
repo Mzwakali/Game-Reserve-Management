@@ -3,6 +3,7 @@ package ac.za.cput.controller.employee;
 import ac.za.cput.domain.employee.WildlifeRanger;
 import ac.za.cput.service.employee.Imp.WildlifeRangerServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Set;
@@ -14,7 +15,7 @@ public class WildlifeRangerController {
     @Autowired
     private WildlifeRangerServiceImp wildlifeRangerService;
 
-    @PostMapping
+    @PostMapping(value = "/create", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ResponseBody
     public WildlifeRanger create(WildlifeRanger wildlifeRanger){
         return wildlifeRangerService.create(wildlifeRanger);

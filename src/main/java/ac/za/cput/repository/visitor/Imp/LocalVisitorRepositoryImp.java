@@ -14,7 +14,7 @@ public class LocalVisitorRepositoryImp implements LocalVisitorRepositry {
     private static LocalVisitorRepositoryImp localVisitorRepository = null;
     private Map<Integer, LocalVisitor> locals;
 
-    private LocalVisitorRepositoryImp(){
+    public LocalVisitorRepositoryImp(){
         this.locals = new HashMap<>();
     }
 

@@ -14,7 +14,7 @@ public class EquipmentRepositoryImp implements EquipmentRepository {
     private static EquipmentRepositoryImp equipmentRepository = null;
     private Map<Integer, Equipment> equipment;
 
-    private EquipmentRepositoryImp(){
+    public EquipmentRepositoryImp(){
         this.equipment = new HashMap<>();
     }
 

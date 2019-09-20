@@ -14,7 +14,7 @@ public class ProtectedAreaRepositoryImp implements ProtectedAreaRepository {
     private static ProtectedAreaRepositoryImp protectedAreaRepository = null;
     private Map<Integer, ProtectedArea> protectedAreas;
 
-    private ProtectedAreaRepositoryImp(){
+    public ProtectedAreaRepositoryImp(){
         this.protectedAreas = new HashMap<>();
     }
 

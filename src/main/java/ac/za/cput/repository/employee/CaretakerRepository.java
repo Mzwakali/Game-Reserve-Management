@@ -6,6 +6,5 @@ import ac.za.cput.repository.InterfaceRepository;
 import java.util.Set;
 
 public interface CaretakerRepository extends InterfaceRepository<Caretaker, Integer> {
-
     Set<Caretaker> getAll();
 }

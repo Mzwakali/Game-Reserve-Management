@@ -14,7 +14,7 @@ public class ClinicRepositoryImp implements ClinicRepository {
     private static ClinicRepositoryImp clinicRepository = null;
     private Map<Integer, Clinic> clinics;
 
-    private ClinicRepositoryImp(){
+    public ClinicRepositoryImp(){
         this.clinics = new HashMap<>();
     }
 

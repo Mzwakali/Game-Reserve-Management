@@ -3,6 +3,7 @@ package ac.za.cput.controller.employee;
 import ac.za.cput.domain.employee.Security;
 import ac.za.cput.service.employee.Imp.SecurityServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Set;
@@ -14,7 +15,7 @@ public class SecurityController {
     @Autowired
     private SecurityServiceImp securityService;
 
-    @PostMapping
+    @PostMapping(value = "/create", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
     @ResponseBody
     public Security create(Security security){
         return securityService.create(security);

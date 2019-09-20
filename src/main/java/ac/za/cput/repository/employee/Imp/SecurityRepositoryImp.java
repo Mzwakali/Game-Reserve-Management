@@ -14,7 +14,7 @@ public class SecurityRepositoryImp implements SecurityRepository {
     private static SecurityRepositoryImp securityRepo = null;
     private Map<Integer, Security> securities;
 
-    private SecurityRepositoryImp(){
+    public SecurityRepositoryImp(){
         securities = new HashMap<>();
     }
 

@@ -21,7 +21,7 @@ public class WildlifeRangerRepositoryImp implements WildlifeRangerRepository {
         return wildlifeRangerRepo;
     }
 
-    private WildlifeRangerRepositoryImp(){
+    public WildlifeRangerRepositoryImp(){
         this.wildlifeRangers = new HashMap<>();
     }
 

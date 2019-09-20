@@ -14,7 +14,7 @@ public class DepartmentRepositoryImp implements DepartmentRepository {
     private static DepartmentRepositoryImp departmentRepository = null;
     private Map<Integer, Department> departments;
 
-    private DepartmentRepositoryImp(){
+    public DepartmentRepositoryImp(){
         this.departments = new HashMap<>();
     }
 
