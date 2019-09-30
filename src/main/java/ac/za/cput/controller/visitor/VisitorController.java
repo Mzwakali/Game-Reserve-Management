@@ -4,6 +4,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/visitor")
+@RequestMapping("/game-reserve-management/visitor")
 public class VisitorController {
 }

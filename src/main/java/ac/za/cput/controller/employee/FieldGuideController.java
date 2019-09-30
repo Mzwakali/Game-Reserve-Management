@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Set;
 
-@RestController
-@RequestMapping("/employee/guide")
+//@RestController
+//@RequestMapping("/employee/guide")
 public class FieldGuideController {
 
-    @Autowired
+    /*@Autowired
     private FieldGuideServiceImp fieldGuideService;
 
     @PostMapping(value = "/create", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
@@ -42,5 +42,5 @@ public class FieldGuideController {
     @GetMapping("/getAll")
     public Set<FieldGuide> getAll(){
         return fieldGuideService.getAll();
-    }
+    }*/
 }

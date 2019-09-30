@@ -9,7 +9,7 @@ import java.util.List;
 
 public class FieldGuideFactory {
 
-    public static FieldGuide getGuide(int guideId, String booking, String visitor) {
+    public static FieldGuide getGuide(int guideId/*, String booking, String visitor*/) {
         return new FieldGuide.FieldGuideBuilder()
                 .guideId(guideId)
                 //.booking(booking)

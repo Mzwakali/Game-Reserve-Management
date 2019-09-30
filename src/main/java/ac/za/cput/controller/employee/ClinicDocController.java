@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Set;
 
-@RestController
-@RequestMapping("/game-reserve-management/employee/doc")
+//@RestController
+//@RequestMapping("/game-reserve-management/employee/doc")
 public class ClinicDocController {
 
-    @Autowired
+    /*@Autowired
     private ClinicDocServiceImp clinicDocService;
 
     @PostMapping(value = "/create", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
@@ -42,6 +42,6 @@ public class ClinicDocController {
     @GetMapping("/getAll")
     public Set<ClinicDoc> getAll(){
         return clinicDocService.getAll();
-    }
+    }*/
 
 }

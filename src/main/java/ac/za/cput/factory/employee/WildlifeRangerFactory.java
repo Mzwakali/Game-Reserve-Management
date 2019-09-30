@@ -8,7 +8,7 @@ import java.util.List;
 
 public class WildlifeRangerFactory {
 
-    public static WildlifeRanger getWildlifeRanger(int wildlifeRangerId, String department, String qualification){
+    public static WildlifeRanger getWildlifeRanger(int wildlifeRangerId/*, String department, String qualification*/){
         return (WildlifeRanger) new WildlifeRanger.WildlifeRangerBuilder()
                 .empId(wildlifeRangerId)
                 //.departments(department)

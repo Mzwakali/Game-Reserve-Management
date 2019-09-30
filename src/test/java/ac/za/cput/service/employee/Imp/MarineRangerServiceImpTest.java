@@ -24,18 +24,18 @@ public class MarineRangerServiceImpTest {
 
     @Test
     public void create() {
-        MarineRanger ranger = MarineRangerFactory.getMarineRanger(1,"Marine World");
+        MarineRanger ranger = MarineRangerFactory.getMarineRanger(1/*,"Marine World"*/);
         marineRangerService.create(ranger);
         Assert.assertNotNull(marineRangerService.getAll());
     }
 
     @Test
     public void update() {
-        MarineRanger ranger = MarineRangerFactory.getMarineRanger(1,"Marine World");
+        MarineRanger ranger = MarineRangerFactory.getMarineRanger(1/*,"Marine World"*/);
         marineRangerService.create(ranger);
         Assert.assertNotNull(marineRangerService.getAll());
 
-        MarineRanger rangerUpdate = MarineRangerFactory.getMarineRanger(2, "Marine World");
+        MarineRanger rangerUpdate = MarineRangerFactory.getMarineRanger(2/*, "Marine World"*/);
         rangerUpdate.setEmpId(ranger.getEmpId());
         marineRangerService.update(rangerUpdate);
 
@@ -45,7 +45,7 @@ public class MarineRangerServiceImpTest {
 
     @Test
     public void delete() {
-        MarineRanger ranger = MarineRangerFactory.getMarineRanger(1,"Marine World");
+        MarineRanger ranger = MarineRangerFactory.getMarineRanger(1/*,"Marine World"*/);
         marineRangerService.create(ranger);
         Assert.assertNotNull(marineRangerService.getAll());
 
@@ -57,7 +57,7 @@ public class MarineRangerServiceImpTest {
 
     @Test
     public void read() {
-        MarineRanger ranger = MarineRangerFactory.getMarineRanger(1,"Marine World");
+        MarineRanger ranger = MarineRangerFactory.getMarineRanger(1/*,"Marine World"*/);
         marineRangerService.create(ranger);
         Assert.assertNotNull(marineRangerService.getAll());
 

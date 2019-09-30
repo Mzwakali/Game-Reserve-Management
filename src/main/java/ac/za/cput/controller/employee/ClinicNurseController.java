@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Set;
 
-@RestController
-@RequestMapping("/game-reserve-management/employee/nurse")
+//@RestController
+//@RequestMapping("/game-reserve-management/employee/nurse")
 public class ClinicNurseController {
 
-    @Autowired
+    /*@Autowired
     private ClinicNurseServiceImp clinicNurseService;
 
     @PostMapping(value = "/create", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
@@ -43,5 +43,5 @@ public class ClinicNurseController {
     @GetMapping("/getAll")
     public Set<ClinicNurse> getAll(){
         return clinicNurseService.getAll();
-    }
+    }*/
 }

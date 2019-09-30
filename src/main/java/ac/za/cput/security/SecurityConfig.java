@@ -22,11 +22,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         auth
                 .inMemoryAuthentication()
                 .withUser("user")
-                .password(passwordEncoder().encode("pass"))
+                .password(passwordEncoder().encode("userpass"))
                 .roles(USER_ROLE)
                 .and()
-                .withUser("sysadmin")
-                .password(passwordEncoder().encode("syspass"))
+                .withUser("admin")
+                .password(passwordEncoder().encode("adminpass"))
                 .roles(ADMIN_ROLE);
     }
 
@@ -36,14 +36,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .httpBasic()
                 .and()
                 .authorizeRequests()
-                //.anyRequest().authenticated()
-                //.antMatchers(HttpMethod.GET, "indexController").authenticated()
-                .antMatchers(HttpMethod.GET,"game-reserve-management/**/create/**")
-                .hasRole(ADMIN_ROLE)
-                //.antMatchers("reservation/**").hasAnyRole("USERs", "Sysadmin")
+                .antMatchers(HttpMethod.GET,"/game-reserve-management/**").hasRole(ADMIN_ROLE)
                 .and()
                 .csrf().disable()
-                .formLogin().disable();
+                //.frameOptions().disable()
+                .formLogin();//.disable();
     }
 
     @Bean

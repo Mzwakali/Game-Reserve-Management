@@ -25,7 +25,7 @@ public class MarineRangerControllerTest {
 
     @Test
     public void create() {
-        MarineRanger ranger = MarineRangerFactory.getMarineRanger(2,null);
+        MarineRanger ranger = MarineRangerFactory.getMarineRanger(2/*,null*/);
         ranger.setEmpId(ranger.getEmpId());
 
         ResponseEntity<MarineRanger> responseEntity = restTemplate.postForEntity(originUrl +"/create", ranger, MarineRanger.class);

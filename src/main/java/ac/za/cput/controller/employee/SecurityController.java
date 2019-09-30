@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Set;
 
-@RestController
-@RequestMapping("/employee/security")
+//@RestController
+//@RequestMapping("/employee/security")
 public class SecurityController {
 
-    @Autowired
+    /*@Autowired
     private SecurityServiceImp securityService;
 
     @PostMapping(value = "/create", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
@@ -42,5 +42,5 @@ public class SecurityController {
     @GetMapping("/getAll")
     public Set<Security> getAll(){
         return securityService.getAll();
-    }
+    }*/
 }

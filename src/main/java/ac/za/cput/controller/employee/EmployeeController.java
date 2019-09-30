@@ -1,10 +1,9 @@
 package ac.za.cput.controller.employee;
 
-import ac.za.cput.domain.employee.ClinicNurse;
-import ac.za.cput.domain.employee.Employee;
+import ac.za.cput.domain.employee.*;
 import ac.za.cput.domain.request.NewEmployee;
 import ac.za.cput.factory.ResponseObjectFactory;
-import ac.za.cput.factory.employee.EmployeeFactory;
+import ac.za.cput.factory.employee.*;
 import ac.za.cput.service.employee.ClinicDocService;
 import ac.za.cput.service.employee.Imp.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/game-reserve-management/employee")
+@RequestMapping("/responseDescription/employee")
 public class EmployeeController {
 
     @Autowired
@@ -32,7 +31,7 @@ public class EmployeeController {
         return "Welcome To G.R Management";
     }
 
-    @PostMapping(value = "/create", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @GetMapping(value = "/create", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity createEmployee(@RequestBody NewEmployee employee){
         System.out.println(employee);
         ResponseObject responseObj = ResponseObjectFactory.buildGenericResponseObject(HttpStatus.OK.toString(), "Created Successfully");
@@ -52,6 +51,41 @@ public class EmployeeController {
     private  Employee saveEmployee(NewEmployee employee){
         Employee emp = EmployeeFactory.buildEmployee(employee.getEmpId(), employee.getFirstName(), employee.getLastName(), employee.getPosition(), employee.getAge());
         return employeeService.create(emp);
+    }
+
+    private ClinicDoc saveDoctor(NewEmployee employee){
+        ClinicDoc doc = ClinicDocFactory.getClinicDoc(employee.getFirstName(), employee.getLastName(), employee.getPosition());
+        return docService.create(doc);
+    }
+
+    private ClinicNurse saveNurse(NewEmployee employee){
+        ClinicNurse nurse = ClinicNurseFactory.getClinicNurse(employee.getFirstName(), employee.getLastName(), employee.getPosition());
+        return nurseService.create(nurse);
+    }
+
+    private Caretaker saveCaretaker(NewEmployee employee){
+        Caretaker caretaker = CareTakerFactory.getCareTaker(employee.getFirstName(), employee.getLastName(), employee.getPosition(), employee.getAge());
+        return caretakerService.create(caretaker);
+    }
+
+    private Security saveSecurity(NewEmployee employee){
+        Security security = SecurityFactory.getSecurity(employee.getEmpId());
+        return securityService.create(security);
+    }
+
+    private FieldGuide saveGuide(NewEmployee employee){
+        FieldGuide guide = FieldGuideFactory.getGuide(employee.getEmpId());
+        return fieldGuideService.create(guide);
+    }
+
+    private MarineRanger saveMRanger(NewEmployee employee){
+        MarineRanger ranger = MarineRangerFactory.getMarineRanger(employee.getEmpId());
+        return marineRangerService.create(ranger);
+    }
+
+    private WildlifeRanger saveRanger(NewEmployee employee){
+        WildlifeRanger ranger = WildlifeRangerFactory.getWildlifeRanger(employee.getEmpId());
+        return wildlifeRangerService.create(ranger);
     }
 
 

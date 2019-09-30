@@ -24,7 +24,7 @@ public class WildlifeRangerControllerTest {
 
     @Test
     public void create() {
-        WildlifeRanger ranger = WildlifeRangerFactory.getWildlifeRanger(2,"Jurassic Park","Zoologist");
+        WildlifeRanger ranger = WildlifeRangerFactory.getWildlifeRanger(2/*,"Jurassic Park","Zoologist"*/);
         ranger.setEmpId(ranger.getEmpId());
 
         ResponseEntity<WildlifeRanger> responseEntity = restTemplate.postForEntity(originUrl +"/create", ranger, WildlifeRanger.class);

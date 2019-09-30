@@ -25,7 +25,7 @@ public class FieldGuideControllerTest {
 
     @Test
     public void create() {
-        FieldGuide guide = FieldGuideFactory.getGuide(2,"16/06/19","Jacksons");
+        FieldGuide guide = FieldGuideFactory.getGuide(2/*,"16/06/19","Jacksons"*/);
         guide.setGuideId(guide.getGuideId());
 
         ResponseEntity<FieldGuide> responseEntity = restTemplate.postForEntity(originUrl +"/create", guide, FieldGuide.class);

@@ -24,18 +24,18 @@ public class WildlifeRangerServiceImpTest {
 
     @Test
     public void create() {
-        WildlifeRanger ranger = WildlifeRangerFactory.getWildlifeRanger(2, "Jungle", "Zoologist");
+        WildlifeRanger ranger = WildlifeRangerFactory.getWildlifeRanger(2/*, "Jungle", "Zoologist"*/);
         wildlifeRangerService.create(ranger);
         Assert.assertNotNull(wildlifeRangerService.getAll());
     }
 
     @Test
     public void update() {
-        WildlifeRanger ranger = WildlifeRangerFactory.getWildlifeRanger(2, "Jungle", "Zoologist");
+        WildlifeRanger ranger = WildlifeRangerFactory.getWildlifeRanger(2/*, "Jungle", "Zoologist"*/);
         wildlifeRangerService.create(ranger);
         Assert.assertNotNull(wildlifeRangerService.getAll());
 
-        WildlifeRanger rangerUpdate = WildlifeRangerFactory.getWildlifeRanger(2, "Jurassic World", "Jungle Book");
+        WildlifeRanger rangerUpdate = WildlifeRangerFactory.getWildlifeRanger(2/*, "Jurassic World", "Jungle Book"*/);
         rangerUpdate.setEmpId(ranger.getEmpId());
         wildlifeRangerService.update(rangerUpdate);
 
@@ -45,7 +45,7 @@ public class WildlifeRangerServiceImpTest {
 
     @Test
     public void delete() {
-        WildlifeRanger ranger = WildlifeRangerFactory.getWildlifeRanger(2, "Jungle", "Zoologist");
+        WildlifeRanger ranger = WildlifeRangerFactory.getWildlifeRanger(2/*, "Jungle", "Zoologist"*/);
         wildlifeRangerService.create(ranger);
         Assert.assertNotNull(wildlifeRangerService.getAll());
 
@@ -57,7 +57,7 @@ public class WildlifeRangerServiceImpTest {
 
     @Test
     public void read() {
-        WildlifeRanger ranger = WildlifeRangerFactory.getWildlifeRanger(2, "Jungle", "Zoologist");
+        WildlifeRanger ranger = WildlifeRangerFactory.getWildlifeRanger(2/*, "Jungle", "Zoologist"*/);
         wildlifeRangerService.create(ranger);
         Assert.assertNotNull(wildlifeRangerService.getAll());
 

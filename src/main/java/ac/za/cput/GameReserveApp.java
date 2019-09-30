@@ -13,8 +13,8 @@ public class GameReserveApp {
         SpringApplication.run(GameReserveApp.class, args);
     }
 
-    /*@Bean
+    @Bean
     public RestTemplate restTemplate(){
         return new RestTemplate();
-    }*/
-}
+    }
+} 

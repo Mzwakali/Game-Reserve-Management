@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.Set;
 
-@RestController
-@RequestMapping("/employee/marine")
+//@RestController
+//@RequestMapping("/employee/marine")
 public class MarineRangerController {
 
-    @Autowired
+    /*@Autowired
     private MarineRangerServiceImp marineRangerService;
 
     @PostMapping(value = "/create", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
@@ -42,5 +42,5 @@ public class MarineRangerController {
     @GetMapping("/getAll")
     public Set<MarineRanger> getAll(){
         return marineRangerService.getAll();
-    }
+    }*/
 }

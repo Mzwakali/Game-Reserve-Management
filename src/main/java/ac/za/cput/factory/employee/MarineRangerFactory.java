@@ -8,7 +8,7 @@ import java.util.List;
 
 public class MarineRangerFactory {
 
-    public static MarineRanger getMarineRanger(int marineRangerId, String department){
+    public static MarineRanger getMarineRanger(int marineRangerId/*, String department*/){
         return (MarineRanger) new MarineRanger.MarineRangerBuilder()
                 .empId(marineRangerId)
                 //.departments(department)

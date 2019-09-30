@@ -24,7 +24,7 @@ public class FieldGuideServiceImpTest {
 
     @Test
     public void create() {
-        FieldGuide guide = FieldGuideFactory.getGuide(1,"07/06/19",  null);
+        FieldGuide guide = FieldGuideFactory.getGuide(1/*,"07/06/19",  null*/);
         guideService.create(guide);
 
         Assert.assertNotNull(guideService.getAll());
@@ -32,11 +32,11 @@ public class FieldGuideServiceImpTest {
 
     @Test
     public void update() {
-        FieldGuide guide = FieldGuideFactory.getGuide(1,"07/06/19",  null);
+        FieldGuide guide = FieldGuideFactory.getGuide(1/*,"07/06/19",  null*/);
         guideService.create(guide);
         Assert.assertNotNull(guideService.getAll());
 
-        FieldGuide guideUpdate = FieldGuideFactory.getGuide(1, "15/06/19", null);
+        FieldGuide guideUpdate = FieldGuideFactory.getGuide(1/*, "15/06/19", null*/);
         guideUpdate.setGuideId(guide.getGuideId());
         guideService.update(guideUpdate);
 
@@ -46,7 +46,7 @@ public class FieldGuideServiceImpTest {
 
     @Test
     public void delete() {
-        FieldGuide guide = FieldGuideFactory.getGuide(1,"07/06/19",  null);
+        FieldGuide guide = FieldGuideFactory.getGuide(1/*,"07/06/19",  null*/);
         guideService.create(guide);
         Assert.assertNotNull(guideService.getAll());
 
@@ -58,7 +58,7 @@ public class FieldGuideServiceImpTest {
 
     @Test
     public void read() {
-        FieldGuide guide = FieldGuideFactory.getGuide(1,"07/06/19",  null);
+        FieldGuide guide = FieldGuideFactory.getGuide(1/*,"07/06/19",  null*/);
         guideService.create(guide);
         Assert.assertNotNull(guideService.getAll());
 

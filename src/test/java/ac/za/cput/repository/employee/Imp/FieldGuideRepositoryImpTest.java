@@ -25,7 +25,7 @@ public class FieldGuideRepositoryImpTest {
 
     @Test
     public void create() {
-        FieldGuide guide = FieldGuideFactory.getGuide(1,"20/05/19", "International Visitors");
+        FieldGuide guide = FieldGuideFactory.getGuide(1/*,"20/05/19", "International Visitors"*/);
         fieldGuideRepository.create(guide);
 
         Assert.assertNotNull(fieldGuideRepository.getAll());
@@ -33,11 +33,11 @@ public class FieldGuideRepositoryImpTest {
 
     @Test
     public void update() {
-        FieldGuide guide = FieldGuideFactory.getGuide(1,"20/05/19", "International Visitors");
+        FieldGuide guide = FieldGuideFactory.getGuide(1/*,"20/05/19", "International Visitors"*/);
         fieldGuideRepository.create(guide);
 
         Assert.assertNotNull(fieldGuideRepository.getAll());
-        FieldGuide guide1 = FieldGuideFactory.getGuide(1,"26/05/19", "International Visitors");
+        FieldGuide guide1 = FieldGuideFactory.getGuide(1/*,"26/05/19", "International Visitors"*/);
         guide1.setEmpId(guide.getEmpId());
         fieldGuideRepository.update(guide1);
 
@@ -47,7 +47,7 @@ public class FieldGuideRepositoryImpTest {
 
     @Test
     public void delete() {
-        FieldGuide guide = FieldGuideFactory.getGuide(1,"20/05/19", "International Visitors");
+        FieldGuide guide = FieldGuideFactory.getGuide(1/*,"20/05/19", "International Visitors"*/);
         fieldGuideRepository.create(guide);
 
         Assert.assertNotNull(fieldGuideRepository.getAll());
@@ -59,7 +59,7 @@ public class FieldGuideRepositoryImpTest {
 
     @Test
     public void read() {
-        FieldGuide guide = FieldGuideFactory.getGuide(1,"20/05/19", "International Visitors");
+        FieldGuide guide = FieldGuideFactory.getGuide(1/*,"20/05/19", "International Visitors"*/);
         fieldGuideRepository.create(guide);
         Assert.assertNotNull(fieldGuideRepository.getAll());
 
