@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-
+/*
 @Repository("CaretakerInMemory")
 public class CaretakerRepositoryImp implements CaretakerRepository {
 
@@ -26,7 +26,7 @@ public class CaretakerRepositoryImp implements CaretakerRepository {
 
     /*public Caretaker find(int id){
         return caretakers.stream().filter(caretaker -> caretaker.getEmpId() == id).findAny().orElse(null);
-    }*/
+    }
 
     @Override
     public Caretaker create(Caretaker caretaker) {
@@ -46,7 +46,7 @@ public class CaretakerRepositoryImp implements CaretakerRepository {
         if (caretakers.contains(caretaker1)){
             caretakers.remove(caretaker1);
             caretakers.add(caretaker);
-        }*/
+        }
        caretakers.replace(caretaker.getEmpId(), caretaker);
         return caretakers.get(caretaker.getEmpId());
     }
@@ -63,4 +63,4 @@ public class CaretakerRepositoryImp implements CaretakerRepository {
         return new HashSet<>(caretakers.values());
     }
 
-}
+}*/

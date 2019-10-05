@@ -2,10 +2,11 @@ package ac.za.cput.repository.visitor;
 
 import ac.za.cput.domain.visitor.InternationalVisitor;
 import ac.za.cput.repository.InterfaceRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Set;
 
-public interface InternationalVisitorRepository extends InterfaceRepository<InternationalVisitor, Integer> {
+public interface InternationalVisitorRepository extends JpaRepository<InternationalVisitor, Integer> {
 
-    Set<InternationalVisitor> getAll();
+    //Set<InternationalVisitor> getAll();
 }

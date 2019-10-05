@@ -2,8 +2,9 @@ package ac.za.cput.service.employee.Imp;
 
 import ac.za.cput.domain.employee.ClinicNurse;
 import ac.za.cput.repository.employee.ClinicNurseRepository;
-import ac.za.cput.repository.employee.Imp.ClinicNurseRepositoryImp;
+//import ac.za.cput.repository.employee.Imp.ClinicNurseRepositoryImp;
 import ac.za.cput.service.employee.ClinicNurseService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
@@ -11,11 +12,13 @@ import java.util.Set;
 @Service
 public class ClinicNurseServiceImp implements ClinicNurseService {
     private static ClinicNurseServiceImp clinicNurseService = null;
+
+    @Autowired
     private ClinicNurseRepository repository;
 
-    ClinicNurseServiceImp(){
+    /*ClinicNurseServiceImp(){
         this.repository = ClinicNurseRepositoryImp.getRepository();
-    }
+    }*/
 
     public static ClinicNurseServiceImp getClinicNurseService(){
         if (clinicNurseService == null){

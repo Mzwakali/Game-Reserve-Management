@@ -3,10 +3,14 @@ package ac.za.cput.domain.employee;
 
 import ac.za.cput.domain.gameReserve.GameReserve;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.Set;
 
+@Entity
 public class Employee {
 
+    @Id
     private int empId;
     private String firstName;
     private String lastName;

@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-
+/*
 @Repository("ClinicNurseInMemory")
 public class ClinicNurseRepositoryImp implements ClinicNurseRepository {
 
@@ -27,7 +27,7 @@ public class ClinicNurseRepositoryImp implements ClinicNurseRepository {
 
     /*public ClinicNurse find(int id){
         return clinicNurses.stream().filter(clinicNurse -> clinicNurse.getEmpId() == id).findAny().orElse(null);
-    }*/
+    }
 
     @Override
     public Set<ClinicNurse> getAll() {
@@ -46,7 +46,7 @@ public class ClinicNurseRepositoryImp implements ClinicNurseRepository {
         if (clinicNurses.contains(clinicNurse1)){
             clinicNurses.remove(clinicNurse1);
             clinicNurses.add(clinicNurse);
-        }*/
+        }
        clinicNurses.replace(clinicNurse.getEmpId(), clinicNurse);
         return clinicNurses.get(clinicNurse.getEmpId());
     }
@@ -62,7 +62,7 @@ public class ClinicNurseRepositoryImp implements ClinicNurseRepository {
         /*ClinicNurse clinicNurse = find(id);
         if (clinicNurse == null){
             return null;
-        }*/
+        }
         return clinicNurses.get(id);
     }
-}
+}*/
