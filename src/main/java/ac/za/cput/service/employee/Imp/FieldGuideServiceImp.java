@@ -2,22 +2,26 @@ package ac.za.cput.service.employee.Imp;
 
 import ac.za.cput.domain.employee.FieldGuide;
 import ac.za.cput.repository.employee.FieldGuideRepository;
-import ac.za.cput.repository.employee.Imp.FieldGuideRepositoryImp;
+//mport ac.za.cput.repository.employee.Imp.FieldGuideRepositoryImp;
 import ac.za.cput.service.employee.FieldGuideService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Set;
+import java.util.List;
+import java.util.Optional;
 
 @Service
 public class FieldGuideServiceImp implements FieldGuideService {
-    private static FieldGuideServiceImp fieldGuideService = null;
+
+    private static FieldGuideService fieldGuideService = null;
+    @Autowired
     private FieldGuideRepository repository;
 
-    FieldGuideServiceImp(){
+    /*FieldGuideServiceImp(){
         this.repository = FieldGuideRepositoryImp.getFieldGuideRepository();
-    }
+    }*/
 
-    public static FieldGuideServiceImp getFieldGuideService(){
+    public static FieldGuideService getFieldGuideService(){
         if (fieldGuideService == null){
             fieldGuideService = new FieldGuideServiceImp();
         }
@@ -26,27 +30,28 @@ public class FieldGuideServiceImp implements FieldGuideService {
 
     @Override
     public FieldGuide create(FieldGuide guide) {
-        return this.repository.create(guide);
+        return this.repository.save(guide);
     }
 
     @Override
     public FieldGuide update(FieldGuide guide) {
-        return this.repository.update(guide);
+        return this.repository.save(guide);
     }
 
     @Override
     public void delete(Integer id) {
-        this.repository.delete(id);
+        this.repository.deleteById(id);
     }
 
     @Override
     public FieldGuide read(int id) {
-        return this.repository.read(id);
+        Optional<FieldGuide> optionalGuide = this.repository.findById(id);
+        return optionalGuide.orElse(null);
     }
 
     @Override
-    public Set<FieldGuide> getAll() {
-        return this.repository.getAll();
+    public List<FieldGuide> getAll() {
+        return this.repository.findAll();
     }
 
 }

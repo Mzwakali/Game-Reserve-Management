@@ -1,4 +1,4 @@
-package ac.za.cput.repository.employee.Imp;
+/*package ac.za.cput.repository.employee.Imp;
 
 import ac.za.cput.domain.employee.ClinicDoc;
 import ac.za.cput.repository.employee.ClinicDocRepository;
@@ -28,7 +28,7 @@ public class ClinicDocRepositoryImp implements ClinicDocRepository {
 
     /*public ClinicDoc find(Integer id){
         return clinicDocs.stream().filter(clinicDoc -> clinicDoc.getEmpId() == id).findAny().orElse(null);
-    }*/
+    }
 
     @Override
     public ClinicDoc create(ClinicDoc clinicDoc) {
@@ -43,7 +43,7 @@ public class ClinicDocRepositoryImp implements ClinicDocRepository {
         if (clinicDocs.contains(doc)){
             clinicDocs.remove(doc);
             clinicDocs.add(clinicDoc);
-        }*/
+        }
        clinicDocs.replace(clinicDoc.getEmpId(), clinicDoc);
         return clinicDocs.get(clinicDoc.getEmpId());
     }
@@ -62,7 +62,7 @@ public class ClinicDocRepositoryImp implements ClinicDocRepository {
         }
         else {
             return clinicDoc;
-        }*/
+        }
        return clinicDocs.get(id);
     }
 
@@ -70,4 +70,4 @@ public class ClinicDocRepositoryImp implements ClinicDocRepository {
     public Set<ClinicDoc> getAll() {
         return new HashSet<>(clinicDocs.values());
     }
-}
+}*/

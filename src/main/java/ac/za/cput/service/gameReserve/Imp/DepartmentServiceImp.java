@@ -2,21 +2,27 @@ package ac.za.cput.service.gameReserve.Imp;
 
 import ac.za.cput.domain.gameReserve.Department;
 import ac.za.cput.repository.gameReserve.DepartmentRepository;
-import ac.za.cput.repository.gameReserve.Imp.DepartmentRepositoryImp;
+//import ac.za.cput.repository.gameReserve.Imp.DepartmentRepositoryImp;
 import ac.za.cput.service.gameReserve.DepartmentService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Set;
+import java.util.List;
+import java.util.Optional;
+
 @Service
 public class DepartmentServiceImp implements DepartmentService {
-    private static DepartmentServiceImp departmentService = null;
+
+    private static DepartmentService departmentService = null;
+
+    @Autowired
     private DepartmentRepository repository;
 
-    DepartmentServiceImp(){
+    /*DepartmentServiceImp(){
         this.repository = DepartmentRepositoryImp.getDepartmentRepository();
-    }
+    }*/
 
-    public static DepartmentServiceImp getDepartmentService(){
+    public static DepartmentService getDepartmentService(){
         if (departmentService == null){
             departmentService = new DepartmentServiceImp();
         }
@@ -24,27 +30,28 @@ public class DepartmentServiceImp implements DepartmentService {
     }
 
     @Override
-    public Set<Department> getAll() {
-        return this.repository.getAll();
+    public List<Department> getAll() {
+        return this.repository.findAll();
     }
 
     @Override
     public Department create(Department department) {
-        return this.repository.create(department);
+        return this.repository.save(department);
     }
 
     @Override
     public Department update(Department department) {
-        return this.repository.update(department);
+        return this.repository.save(department);
     }
 
     @Override
     public void delete(Integer id) {
-        this.repository.delete(id);
+        this.repository.deleteById(id);
     }
 
     @Override
     public Department read(int id) {
-        return this.repository.read(id);
+        Optional<Department> optionalDepartment = this.repository.findById(id);
+        return optionalDepartment.orElse(null);
     }
 }

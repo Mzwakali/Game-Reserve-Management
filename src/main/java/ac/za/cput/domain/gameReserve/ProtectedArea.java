@@ -1,9 +1,13 @@
 package ac.za.cput.domain.gameReserve;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.List;
 import java.util.Set;
 
-public class ProtectedArea {
+@Entity
+public class ProtectedArea extends Grounds{
+
 
     private int areaId;
     private List<Department> departments;
@@ -11,7 +15,7 @@ public class ProtectedArea {
     public ProtectedArea(ProtectedAreaBuilder protectedAreaBuilder) {
     }
 
-    public int getAreaId() {
+   public int getAreaId() {
         return areaId;
     }
 
@@ -34,7 +38,7 @@ public class ProtectedArea {
         public ProtectedAreaBuilder() {
         }
 
-        public ProtectedAreaBuilder areaId(int areaId) {
+       public ProtectedAreaBuilder areaId(int areaId) {
             this.areaId = areaId;
             return this;
         }
@@ -50,7 +54,7 @@ public class ProtectedArea {
         @Override
         public String toString() {
             return "ProtectedAreaBuilder{" +
-                    "areaId=" + areaId +
+                    //"areaId=" + areaId +
                     ", departments=" + departments +
                     '}';
         }

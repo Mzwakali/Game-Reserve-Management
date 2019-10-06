@@ -2,11 +2,18 @@ package ac.za.cput.domain.reservation;
 
 import ac.za.cput.domain.employee.FieldGuide;
 
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.Set;
 
+@Entity
 public class Tour {
+
+    @Id
     private int tourId;
     private String siteName;
+    @ElementCollection
     private Set<FieldGuide> guides;
 
     public Tour() {

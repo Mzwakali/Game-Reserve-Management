@@ -2,9 +2,13 @@ package ac.za.cput.domain.employee;
 
 import ac.za.cput.domain.gameReserve.Department;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.List;
 
+@Entity
 public class GeneralWorker extends Employee{
+
 
     private int generalWorkId;
     private List<Department> departments;

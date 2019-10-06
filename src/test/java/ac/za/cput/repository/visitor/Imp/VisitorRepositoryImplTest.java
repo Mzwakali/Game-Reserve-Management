@@ -10,7 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import static org.junit.Assert.*;
-
+/*
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class VisitorRepositoryImplTest {
@@ -66,4 +66,4 @@ public class VisitorRepositoryImplTest {
         Visitor visitor1 = visitorRepository.read(visitor.getVisitorId());
         Assert.assertEquals(visitor, visitor1);
     }
-}
+}*/

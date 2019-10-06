@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-
+/*
 @Repository("LocalVisitorInMemory")
 public class LocalVisitorRepositoryImp implements LocalVisitorRepositry {
     private static LocalVisitorRepositoryImp localVisitorRepository = null;
@@ -32,7 +32,7 @@ public class LocalVisitorRepositoryImp implements LocalVisitorRepositry {
 
    /* public LocalVisitor find(int id){
         return locals.stream().filter(localVisitor -> localVisitor.getVisitorId() == id).findAny().orElse(null);
-    }*/
+    }
 
     @Override
     public LocalVisitor create(LocalVisitor localVisitor) {
@@ -46,7 +46,7 @@ public class LocalVisitorRepositoryImp implements LocalVisitorRepositry {
         if (locals.contains(localVisitor1)){
             locals.remove(localVisitor1);
             locals.add(localVisitor);
-        }*/
+        }
         locals.replace(localVisitor.getVisitorId(), localVisitor);
         return locals.get(localVisitor.getVisitorId());
     }
@@ -65,8 +65,8 @@ public class LocalVisitorRepositoryImp implements LocalVisitorRepositry {
         }
         else {
             return localVisitor;
-        }*/
+        }
         return locals.get(id);
 
     }
-}
+}*/

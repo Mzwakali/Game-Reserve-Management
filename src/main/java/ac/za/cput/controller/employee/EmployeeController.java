@@ -13,7 +13,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/rest/employee")
+@RequestMapping("/game/employee")
 public class EmployeeController {
 
     @Autowired
@@ -31,7 +31,7 @@ public class EmployeeController {
         return "Welcome To G.R Management";
     }
 
-    @GetMapping(value = "/create", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @PostMapping(value = "/create", consumes = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity createEmployee(@RequestBody NewEmployee employee){
         System.out.println(employee);
         ResponseObject responseObj = ResponseObjectFactory.buildGenericResponseObject(HttpStatus.OK.toString(), "Created Successfully");

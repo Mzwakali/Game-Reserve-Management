@@ -6,8 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cglib.core.Local;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Set;
-
+/*
 @RestController
 @RequestMapping("/visitor/localVisitor")
 public class LocalVisitorController {
@@ -43,8 +44,8 @@ public class LocalVisitorController {
 
     @GetMapping("/getAll")
     @ResponseBody
-    public Set<LocalVisitor> getAll(){
+    public List<LocalVisitor> getAll(){
         return localVisitorService.getAll();
     }
 
-}
+}*/

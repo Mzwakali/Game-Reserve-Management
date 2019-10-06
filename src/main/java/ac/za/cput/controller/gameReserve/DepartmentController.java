@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Set;
 
 @RestController
-@RequestMapping("/gameReserve/department")
+@RequestMapping("/game/department")
 public class DepartmentController {
 
     @Autowired
@@ -43,7 +43,7 @@ public class DepartmentController {
 
     @GetMapping("/getAll")
     @ResponseBody
-    public Set<Department> getAll(){
+    public List<Department> getAll(){
         return service.getAll();
     }
 }

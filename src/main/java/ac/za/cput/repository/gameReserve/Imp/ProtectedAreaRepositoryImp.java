@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-
+/*
 @Repository("ProtectedAreaInMemory")
 public class ProtectedAreaRepositoryImp implements ProtectedAreaRepository {
     private static ProtectedAreaRepositoryImp protectedAreaRepository = null;
@@ -27,7 +27,7 @@ public class ProtectedAreaRepositoryImp implements ProtectedAreaRepository {
 
    /* public ProtectedArea find(int id){
         return protectedAreas.stream().filter(protectedArea -> protectedArea.getAreaId() == id).findAny().orElse(null);
-    }*/
+    }
 
     @Override
     public Set<ProtectedArea> getAll() {
@@ -46,7 +46,7 @@ public class ProtectedAreaRepositoryImp implements ProtectedAreaRepository {
         if (protectedAreas.contains(protectedArea1)){
             protectedAreas.remove(protectedArea1);
             protectedAreas.add(protectedArea);
-        }*/
+        }
        protectedAreas.replace(protectedArea.getAreaId(), protectedArea);
         return protectedAreas.get(protectedArea.getAreaId());
     }
@@ -63,7 +63,7 @@ public class ProtectedAreaRepositoryImp implements ProtectedAreaRepository {
         /*ProtectedArea protectedArea = find(id);
         if (protectedArea == null){
             return null;
-        }*/
+        }
         return protectedAreas.get(id);
     }
-}
+}*/

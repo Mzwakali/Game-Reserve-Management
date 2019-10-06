@@ -1,22 +1,28 @@
 package ac.za.cput.service.employee.Imp;
 
 import ac.za.cput.domain.employee.MarineRanger;
-import ac.za.cput.repository.employee.Imp.MarineRangerRepositoryImp;
+//import ac.za.cput.repository.employee.Imp.MarineRangerRepositoryImp;
 import ac.za.cput.repository.employee.MarineRangerRepository;
 import ac.za.cput.service.employee.MarineRangerService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Set;
+import java.util.List;
+import java.util.Optional;
+
 @Service
 public class MarineRangerServiceImp implements MarineRangerService {
-    private static MarineRangerServiceImp marineRangerService = null;
+
+    private static MarineRangerService marineRangerService = null;
+
+    @Autowired
     private MarineRangerRepository repository;
 
-    MarineRangerServiceImp(){
+    /*MarineRangerServiceImp(){
         this.repository = MarineRangerRepositoryImp.getMarineRangerRepository();
-    }
+    }*/
 
-    public static MarineRangerServiceImp getMarineRangerService(){
+    public static MarineRangerService getMarineRangerService(){
         if (marineRangerService == null){
             marineRangerService = new MarineRangerServiceImp();
         }
@@ -24,28 +30,29 @@ public class MarineRangerServiceImp implements MarineRangerService {
     }
 
     @Override
-    public Set<MarineRanger> getAll() {
-        return this.repository.getAll();
+    public List<MarineRanger> getAll() {
+        return this.repository.findAll();
     }
 
     @Override
     public MarineRanger create(MarineRanger marineRanger) {
-        return this.repository.create(marineRanger);
+        return this.repository.save(marineRanger);
     }
 
     @Override
     public MarineRanger update(MarineRanger marineRanger) {
-        return this.repository.update(marineRanger);
+        return this.repository.save(marineRanger);
     }
 
     @Override
     public void delete(Integer id) {
-        this.repository.delete(id);
+        this.repository.deleteById(id);
 
     }
 
     @Override
     public MarineRanger read(int id) {
-        return this.repository.read(id);
+        Optional<MarineRanger> optionalRanger = this.repository.findById(id);
+        return optionalRanger.orElse(null);
     }
 }

@@ -2,12 +2,18 @@ package ac.za.cput.domain.reservation;
 
 import ac.za.cput.domain.visitor.Visitor;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import java.util.Objects;
 
+@Entity
 public class TourBooking extends Tour{
+
 
     private int bookingId;
     private String tourDate;
+    @OneToOne
     private Visitor visitor;
 
     public TourBooking(TourBookingBuilder tourBookingBuilder) {

@@ -1,4 +1,4 @@
-package ac.za.cput.repository.employee.Imp;
+/*package ac.za.cput.repository.employee.Imp;
 
 import ac.za.cput.domain.employee.Security;
 import ac.za.cput.repository.employee.SecurityRepository;
@@ -27,7 +27,7 @@ public class SecurityRepositoryImp implements SecurityRepository {
 
     /*public Security find(int id){
         return securities.stream().filter(security -> security.getEmpId() ==id).findAny().orElse(null);
-    }*/
+    }
 
     @Override
     public Set<Security> getAll() {
@@ -46,7 +46,7 @@ public class SecurityRepositoryImp implements SecurityRepository {
         if (securities.contains(security1)){
             securities.remove(security1);
             securities.add(security);
-        }*/
+        }
        securities.replace(security.getEmpId(), security);
         return securities.get(security.getEmpId());
     }
@@ -65,7 +65,7 @@ public class SecurityRepositoryImp implements SecurityRepository {
         }
         else {
             return security;
-        }*/
+        }
         return  securities.get(id);
     }
-}
+}*/

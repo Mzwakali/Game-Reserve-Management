@@ -1,7 +1,8 @@
 package ac.za.cput.domain.employee;
 
+import javax.persistence.Entity;
 import java.util.*;
-
+@Entity
 public class ClinicDoc extends Employee{
     private List<Qualification> qualifications;
     private String position;

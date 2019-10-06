@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-
+/*
 @Repository("VisitorInMemory")
 public class VisitorRepositoryImpl implements VisitorRepository {
 
@@ -32,7 +32,7 @@ public class VisitorRepositoryImpl implements VisitorRepository {
     }
     /*public visitor find(int id){
         return visitors.stream().filter(visitor -> visitor.getVisitorId() == id).findAny().orElse(null);
-    }*/
+    }
 
     @Override
     public Visitor update(Visitor visitor) {
@@ -40,7 +40,7 @@ public class VisitorRepositoryImpl implements VisitorRepository {
         if (visitors.contains(visits)){
             visitors.remove(visits);
             visitors.add(visitor);
-        }*/
+        }
         visitors.replace(visitor.getVisitorId(), visitor);
         return visitors.get(visitor.getVisitorId());
     }
@@ -60,7 +60,7 @@ public class VisitorRepositoryImpl implements VisitorRepository {
         }
         else {
             return visitor;
-        }*/
+        }
         return visitors.get(id);
     }
 
@@ -68,4 +68,4 @@ public class VisitorRepositoryImpl implements VisitorRepository {
     public Set<Visitor> getAll() {
         return new HashSet<>(visitors.values());
     }
-}
+}*/

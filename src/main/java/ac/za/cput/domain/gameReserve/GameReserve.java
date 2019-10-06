@@ -1,8 +1,13 @@
 package ac.za.cput.domain.gameReserve;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class GameReserve {
 
-
+    @Id
+    private Integer zooId;
     private String zooName;
 
     public GameReserve() {

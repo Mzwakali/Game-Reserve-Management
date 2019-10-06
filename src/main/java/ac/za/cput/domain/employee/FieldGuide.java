@@ -4,11 +4,15 @@ import ac.za.cput.domain.gameReserve.Department;
 import ac.za.cput.domain.reservation.TourBooking;
 import ac.za.cput.domain.visitor.Visitor;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
 
+@Entity
 public class FieldGuide extends Employee{
+
 
     private int guideId;
     private TourBooking booking;

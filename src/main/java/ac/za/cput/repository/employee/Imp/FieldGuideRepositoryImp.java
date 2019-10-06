@@ -1,4 +1,4 @@
-package ac.za.cput.repository.employee.Imp;
+/*package ac.za.cput.repository.employee.Imp;
 
 import ac.za.cput.domain.employee.FieldGuide;
 import ac.za.cput.repository.employee.FieldGuideRepository;
@@ -27,7 +27,7 @@ public class FieldGuideRepositoryImp implements FieldGuideRepository {
 
     /*public FieldGuide find(int id){
         return guides.stream().filter(guide -> guide.getEmpId() == id).findAny().orElse(null);
-    }*/
+    }
 
     @Override
     public FieldGuide create(FieldGuide guide) {
@@ -41,7 +41,7 @@ public class FieldGuideRepositoryImp implements FieldGuideRepository {
         if (guides.contains(guide1)){
             guides.remove(guide1);
             guides.add(guide);
-        }*/
+        }
        guides.replace(guide.getEmpId(), guide);
         return guides.get(guide.getEmpId());
     }
@@ -58,7 +58,7 @@ public class FieldGuideRepositoryImp implements FieldGuideRepository {
         /*FieldGuide guide = find(id);
         if (guide == null){
             return null;
-        }*/
+        }
         return guides.get(id);
     }
 
@@ -67,4 +67,4 @@ public class FieldGuideRepositoryImp implements FieldGuideRepository {
         return new HashSet<>(guides.values());
     }
 
-}
+}*/

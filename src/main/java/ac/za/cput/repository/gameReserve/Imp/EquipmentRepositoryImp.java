@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-
+/*
 @Repository("EquipmentInMemory")
 public class EquipmentRepositoryImp implements EquipmentRepository {
     private static EquipmentRepositoryImp equipmentRepository = null;
@@ -27,7 +27,7 @@ public class EquipmentRepositoryImp implements EquipmentRepository {
 
     /*public Equipment find(int id){
         return equipment.stream().filter(equip -> equip.getEquipId() == id).findAny().orElse(null);
-    }*/
+    }
 
     @Override
     public Set<Equipment> getAll() {
@@ -46,7 +46,7 @@ public class EquipmentRepositoryImp implements EquipmentRepository {
         if (equipment.contains(equipment1)){
             equipment.remove(equipment1);
             equipment.add(equip);
-        }*/
+        }
         equipment.replace(equip.getEquipId(), equip);
         return equipment.get(equip.getEquipId());
     }
@@ -62,7 +62,7 @@ public class EquipmentRepositoryImp implements EquipmentRepository {
         /*Equipment equip = find(id);
         if (equip == null){
             return null;
-        }*/
+        }
         return equipment.get(id);
     }
-}
+}*/

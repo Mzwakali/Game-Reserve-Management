@@ -1,9 +1,13 @@
 package ac.za.cput.domain.gameReserve;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.List;
 import java.util.Objects;
 
-public class Equipment {
+@Entity
+public class Equipment extends Department{
+
 
     private int equipId;
     private String description;

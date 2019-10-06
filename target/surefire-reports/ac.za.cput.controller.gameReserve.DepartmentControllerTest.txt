@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: ac.za.cput.controller.gameReserve.DepartmentControllerTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.009 s <<< FAILURE! - in ac.za.cput.controller.gameReserve.DepartmentControllerTest
+initializationError(ac.za.cput.controller.gameReserve.DepartmentControllerTest)  Time elapsed: 0.006 s  <<< ERROR!
+java.lang.NoClassDefFoundError: Could not initialize class org.springframework.test.context.junit4.SpringRunner
+

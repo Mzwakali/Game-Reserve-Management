@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-
+/*
 @Repository("InternationalVisitorInMemory")
 public class InternationalVisitorRepositoryImp implements InternationalVisitorRepository {
     private static InternationalVisitorRepositoryImp internationalVisitorRepo = null;
@@ -32,7 +32,7 @@ public class InternationalVisitorRepositoryImp implements InternationalVisitorRe
 
     /*public InternationalVisitor find(int id){
         return internationalVisitors.stream().filter(internationalVisitor -> internationalVisitor.getVisitorId() == id).findAny().orElse(null);
-    }*/
+    }
 
     @Override
     public InternationalVisitor create(InternationalVisitor internationalVisitor) {
@@ -46,7 +46,7 @@ public class InternationalVisitorRepositoryImp implements InternationalVisitorRe
         if (internationalVisitors.contains(internationalVisitor1)){
             internationalVisitors.remove(internationalVisitor1);
             internationalVisitors.add(internationalVisitor);
-        }*/
+        }
         internationalVisitors.replace(internationalVisitor.getVisitorId(), internationalVisitor);
         return internationalVisitors.get(internationalVisitor.getVisitorId());
     }
@@ -66,8 +66,8 @@ public class InternationalVisitorRepositoryImp implements InternationalVisitorRe
         }
         else {
             return internationalVisitor;
-        }*/
+        }
         return internationalVisitors.get(id);
 
     }
-}
+}*/

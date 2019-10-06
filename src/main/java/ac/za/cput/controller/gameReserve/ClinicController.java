@@ -5,10 +5,11 @@ import ac.za.cput.service.gameReserve.Imp.ClinicServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Set;
 
 @RestController
-@RequestMapping("/gameReserve/clinic")
+@RequestMapping("/game/clinic")
 public class ClinicController {
 
     @Autowired
@@ -42,7 +43,7 @@ public class ClinicController {
 
     @GetMapping("/getAll")
     @ResponseBody
-    public Set<Clinic> getAll(){
+    public List<Clinic> getAll(){
         return clinicService.getAll();
     }
 }

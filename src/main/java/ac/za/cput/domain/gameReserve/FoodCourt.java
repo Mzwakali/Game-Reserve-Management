@@ -1,6 +1,11 @@
 package ac.za.cput.domain.gameReserve;
 
-public class FoodCourt {
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class FoodCourt extends GameReserve{
+
 
     private int sectionId;
     private String vendorName;

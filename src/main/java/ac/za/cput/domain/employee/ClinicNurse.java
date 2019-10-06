@@ -1,9 +1,12 @@
 package ac.za.cput.domain.employee;
 
+import javax.persistence.Entity;
 import java.util.List;
 
+@Entity
 public class ClinicNurse extends Employee{
     private String position;
+
     private List<Qualification> qualifications;
 
     public ClinicNurse() {

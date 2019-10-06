@@ -4,10 +4,14 @@ import ac.za.cput.domain.gameReserve.Department;
 import ac.za.cput.domain.gameReserve.GameReserve;
 import ac.za.cput.domain.gameReserve.Grounds;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.List;
 import java.util.Set;
 
+@Entity
 public class GroundsKeeper extends Employee{
+
 
     private int groundsKeepId;
     private List<Department> departmentList;

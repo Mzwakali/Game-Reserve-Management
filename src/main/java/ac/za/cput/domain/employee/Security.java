@@ -2,9 +2,11 @@ package ac.za.cput.domain.employee;
 
 import ac.za.cput.domain.gameReserve.Department;
 
+import javax.persistence.Entity;
 import java.util.List;
 import java.util.Map;
 
+@Entity
 public class Security extends Employee{
     //private int securityId;
     private Map<Integer,Department> departments;

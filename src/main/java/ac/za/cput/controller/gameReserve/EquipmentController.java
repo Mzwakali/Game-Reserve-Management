@@ -5,10 +5,11 @@ import ac.za.cput.service.gameReserve.Imp.EquipmentServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Set;
 
 @RestController
-@RequestMapping("/gameReserve/equipment")
+@RequestMapping("/game/equipment")
 public class EquipmentController {
 
     @Autowired
@@ -35,7 +36,7 @@ public class EquipmentController {
 
     @GetMapping("/getAll")
     @ResponseBody
-    public Set<Equipment> getAll(){
+    public List<Equipment> getAll(){
         return equipmentService.getAll();
     }
 }

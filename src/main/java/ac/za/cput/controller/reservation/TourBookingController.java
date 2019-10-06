@@ -5,10 +5,11 @@ import ac.za.cput.service.reservation.Imp.TourBookingServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Set;
 
 @RestController
-@RequestMapping("/game-reserve-management/reservation/tourBooking")
+@RequestMapping("/game/tourBooking")
 public class TourBookingController {
 
     @Autowired
@@ -42,7 +43,7 @@ public class TourBookingController {
 
     @GetMapping("/getAll")
     @ResponseBody
-    public Set<TourBooking> getAll(){
+    public List<TourBooking> getAll(){
         return bookingService.getAll();
     }
 }

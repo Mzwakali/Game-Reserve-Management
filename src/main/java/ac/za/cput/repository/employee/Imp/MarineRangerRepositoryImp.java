@@ -1,4 +1,4 @@
-package ac.za.cput.repository.employee.Imp;
+/*package ac.za.cput.repository.employee.Imp;
 
 import ac.za.cput.domain.employee.MarineRanger;
 import ac.za.cput.repository.employee.MarineRangerRepository;
@@ -28,7 +28,7 @@ public class MarineRangerRepositoryImp implements MarineRangerRepository {
 
     /*public MarineRanger find(int id){
         return marineRangers.stream().filter(marineRanger -> marineRanger.getEmpId() == id).findAny().orElse(null);
-    }*/
+    }
 
     @Override
     public Set<MarineRanger> getAll() {
@@ -47,7 +47,7 @@ public class MarineRangerRepositoryImp implements MarineRangerRepository {
         if (marineRangers.contains(marineRanger)){
             marineRangers.remove(marineRanger);
             marineRangers.add(marineRanger);
-        }*/
+        }
         marineRangers.replace(marineRanger.getEmpId(), marineRanger);
         return marineRangers.get(marineRanger.getEmpId());
     }
@@ -64,7 +64,7 @@ public class MarineRangerRepositoryImp implements MarineRangerRepository {
        /* MarineRanger marineRanger = find(id);
         if (marineRanger == null){
             return null;
-        }*/
+        }
         return marineRangers.get(id);
     }
-}
+}*/

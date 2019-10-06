@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-
+/*
 @Repository("DepartmentInMemory")
 public class DepartmentRepositoryImp implements DepartmentRepository {
     private static DepartmentRepositoryImp departmentRepository = null;
@@ -27,7 +27,7 @@ public class DepartmentRepositoryImp implements DepartmentRepository {
 
     /*public Department find(int id){
         return departments.stream().filter(department -> department.getDeptId() == id).findAny().orElse(null);
-    }*/
+    }
 
     @Override
     public Set<Department> getAll() {
@@ -46,7 +46,7 @@ public class DepartmentRepositoryImp implements DepartmentRepository {
         if (departments.contains(department1)){
             departments.remove(department1);
             departments.add(department);
-        }*/
+        }
        departments.replace(department.getDeptId(), department);
         return departments.get(department.getDeptId());
     }
@@ -65,7 +65,7 @@ public class DepartmentRepositoryImp implements DepartmentRepository {
         }
         else {
             return department;
-        }*/
+        }
         return departments.get(id);
     }
-}
+}*/

@@ -2,8 +2,10 @@ package ac.za.cput.domain.employee;
 
 import ac.za.cput.domain.gameReserve.Department;
 
+import javax.persistence.Entity;
 import java.util.List;
 
+@Entity
 public class WildlifeRanger extends Ranger{
     //private int rangerId;
     private List<Qualification> qualificationList;

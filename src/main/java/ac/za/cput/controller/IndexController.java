@@ -14,7 +14,7 @@ public class IndexController {
     public String home(){
         return "Game Reserve Management System";
     }*/
-    @RequestMapping(value = {"/", "/game-reserve-management/**"})
+    @RequestMapping(value = {"/", "/game/**"})
     public ResponseEntity<String> home() {
         return new ResponseEntity<>("Welcome to the Game Reserve Management System!", HttpStatus.OK);
     }

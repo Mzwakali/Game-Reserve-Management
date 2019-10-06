@@ -2,10 +2,20 @@ package ac.za.cput.domain.visitor;
 
 import ac.za.cput.domain.employee.FieldGuide;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+
+@Entity
 public class Visitor {
 
+    @Id
     private int visitorId;
-    private String firstName, lastName, cellphone;
+    private String firstName;
+    private String lastName;
+    private String cellphone;
+    @OneToOne
     private FieldGuide guide;
 
     public Visitor(Builder builder) {

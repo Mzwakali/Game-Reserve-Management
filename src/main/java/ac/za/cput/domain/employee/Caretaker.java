@@ -1,5 +1,8 @@
 package ac.za.cput.domain.employee;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Caretaker extends Employee{
 
     private int[] keys;

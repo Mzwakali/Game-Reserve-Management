@@ -2,22 +2,26 @@ package ac.za.cput.service.employee.Imp;
 
 import ac.za.cput.domain.employee.ClinicDoc;
 import ac.za.cput.repository.employee.ClinicDocRepository;
-import ac.za.cput.repository.employee.Imp.ClinicDocRepositoryImp;
 import ac.za.cput.service.employee.ClinicDocService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Set;
+import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ClinicDocServiceImp implements ClinicDocService {
-    private static ClinicDocServiceImp clinicDocService = null;
-    private ClinicDocRepository repository;
 
-    ClinicDocServiceImp(){
+    private static ClinicDocService clinicDocService = null;
+
+    @Autowired
+    private ClinicDocRepository docRepository;
+
+   /* ClinicDocServiceImp(){
         this.repository = ClinicDocRepositoryImp.getRepository();
-    }
+    }*/
 
-    public static ClinicDocServiceImp getClinicDocService(){
+    public static ClinicDocService getClinicDocService(){
         if (clinicDocService == null){
             clinicDocService = new ClinicDocServiceImp();
         }
@@ -25,26 +29,27 @@ public class ClinicDocServiceImp implements ClinicDocService {
     }
     @Override
     public ClinicDoc create(ClinicDoc clinicDoc) {
-        return this.repository.create(clinicDoc);
+        return this.docRepository.save(clinicDoc);
     }
 
     @Override
     public ClinicDoc update(ClinicDoc clinicDoc) {
-        return this.repository.update(clinicDoc);
+        return this.docRepository.save(clinicDoc);
     }
 
     @Override
     public void delete(Integer id) {
-        this.repository.delete(id);
+        this.docRepository.deleteById(id);
     }
 
     @Override
     public ClinicDoc read(int id) {
-        return this.repository.read(id);
+        Optional<ClinicDoc> optionalDoc = this.docRepository.findById(id);
+        return optionalDoc.orElse(null);
     }
 
     @Override
-    public Set<ClinicDoc> getAll() {
-        return this.repository.getAll();
+    public List<ClinicDoc> getAll() {
+        return this.docRepository.findAll();
     }
 }

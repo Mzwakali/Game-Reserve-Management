@@ -1,9 +1,13 @@
 package ac.za.cput.domain.gameReserve;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.awt.*;
 import java.util.List;
 
-public class Clinic {
+@Entity
+public class Clinic extends GameReserve{
+
 
     private int clinicId;
     private String clinicName;

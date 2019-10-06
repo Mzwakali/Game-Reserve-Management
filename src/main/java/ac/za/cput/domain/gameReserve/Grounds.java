@@ -1,12 +1,21 @@
 package ac.za.cput.domain.gameReserve;
 
+import javax.persistence.ElementCollection;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import java.util.List;
 
+@Entity
 public class Grounds {
 
+    @Id
     private int sectionId;
     private double size;
+    @ElementCollection
     private List<Department> departments;
+
+    public Grounds() {
+    }
 
     public Grounds(GroundsBuilder groundsBuilder) {
 

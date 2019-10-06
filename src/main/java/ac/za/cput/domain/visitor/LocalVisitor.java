@@ -2,7 +2,11 @@ package ac.za.cput.domain.visitor;
 
 import ac.za.cput.domain.reservation.TourBooking;
 
+import javax.persistence.Entity;
+
+@Entity
 public class LocalVisitor extends Visitor {
+
 
     private TourBooking booking;
 

@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
-
+/*
 @Repository("TourBookingInMemory")
 public class TourBookingRepositoryImp implements TourBookingRepository {
     private static TourBookingRepositoryImp bookingRepository = null;
@@ -27,7 +27,7 @@ public class TourBookingRepositoryImp implements TourBookingRepository {
 
     /*public TourBooking find(int id){
         return bookings.stream().filter(booking -> booking.getTourId() == id).findAny().orElse(null);
-    }*/
+    }
 
     @Override
     public TourBooking create(TourBooking booking) {
@@ -41,7 +41,7 @@ public class TourBookingRepositoryImp implements TourBookingRepository {
         if (bookings.contains(booking1)){
             bookings.remove(booking1);
             bookings.add(booking);
-        }*/
+        }
         bookings.replace(booking.getTourId(), booking);
         return bookings.get(booking.getTourId());
     }
@@ -60,7 +60,7 @@ public class TourBookingRepositoryImp implements TourBookingRepository {
         }
         else {
             return booking;
-        }*/
+        }
        return bookings.get(id);
     }
 
@@ -68,4 +68,4 @@ public class TourBookingRepositoryImp implements TourBookingRepository {
     public Set<TourBooking> getAll() {
         return new HashSet<>(bookings.values());
     }
-}
+}*/

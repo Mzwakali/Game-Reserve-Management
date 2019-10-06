@@ -5,6 +5,8 @@ import ac.za.cput.domain.gameReserve.GameReserve;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -16,7 +18,8 @@ public class Employee {
     private String lastName;
     private String position;
     private int age;
-    private Set<GameReserve> gameReserve;
+    @OneToMany
+    private List<GameReserve> gameReserve;
 
     public Employee() {
     }
@@ -49,7 +52,7 @@ public class Employee {
         this.age = age;
     }
 
-    public void setGameReserve(Set<GameReserve> gameReserve) {
+    public void setGameReserve(List<GameReserve> gameReserve) {
         this.gameReserve = gameReserve;
     }
 
@@ -69,7 +72,8 @@ public class Employee {
         return age;
     }
 
-    public Set<GameReserve> getGameReserve() {
+    @OneToMany
+    public List<GameReserve> getGameReserve() {
         return gameReserve;
     }
 

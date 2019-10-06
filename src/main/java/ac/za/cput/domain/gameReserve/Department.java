@@ -1,12 +1,18 @@
 package ac.za.cput.domain.gameReserve;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.util.List;
 import java.util.Objects;
 
-public class Department {
+@Entity
+public class Department extends GameReserve{
+
 
     private int deptId;
     private int clinicId;
+    @OneToMany
     private List<ProtectedArea> protectedAreas;
 
     public Department() {
@@ -30,6 +36,7 @@ public class Department {
         this.clinicId = clinicId;
     }
 
+    @OneToMany
     public List<ProtectedArea> getProtectedAreas() {
         return protectedAreas;
     }

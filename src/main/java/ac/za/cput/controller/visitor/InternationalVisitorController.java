@@ -6,8 +6,9 @@ import ac.za.cput.service.visitor.Imp.InternationalVisitorServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Set;
-
+/*
 @RestController
 @RequestMapping("/visitor/internationalVisitor")
 public class InternationalVisitorController {
@@ -43,8 +44,8 @@ public class InternationalVisitorController {
 
     @GetMapping("/getAll")
     @ResponseBody
-    public Set<InternationalVisitor> getAll(){
+    public List<InternationalVisitor> getAll(){
         return internationalVisitorService.getAll();
     }
 
-}
+}*/

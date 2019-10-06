@@ -1,7 +1,12 @@
 package ac.za.cput.domain.employee;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Qualification {
 
+    @Id
     private int qualificationId;
     private String qualificationName;
     private String instituteName;

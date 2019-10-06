@@ -5,10 +5,11 @@ import ac.za.cput.service.gameReserve.Imp.ProtectedAreaServiceImp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Set;
 
 @RestController
-@RequestMapping("/gameReserve/protectedArea")
+@RequestMapping("/game/protectedArea")
 public class ProtectedAreaController {
 
     @Autowired
@@ -42,7 +43,7 @@ public class ProtectedAreaController {
 
     @GetMapping("/getAll")
     @ResponseBody
-    public Set<ProtectedArea> getAll(){
+    public List<ProtectedArea> getAll(){
         return protectedAreaService.getAll();
     }
 }

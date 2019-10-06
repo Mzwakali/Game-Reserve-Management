@@ -1,4 +1,4 @@
-package ac.za.cput.repository.employee.Imp;
+/*package ac.za.cput.repository.employee.Imp;
 
 import ac.za.cput.domain.employee.WildlifeRanger;
 import ac.za.cput.repository.employee.WildlifeRangerRepository;
@@ -27,7 +27,7 @@ public class WildlifeRangerRepositoryImp implements WildlifeRangerRepository {
 
     /*public WildlifeRanger find(int id){
         return wildlifeRangers.stream().filter(wildlifeRanger -> wildlifeRanger.getEmpId() == id).findAny().orElse(null);
-    }*/
+    }
 
     @Override
     public Set<WildlifeRanger> getAll() {
@@ -46,7 +46,7 @@ public class WildlifeRangerRepositoryImp implements WildlifeRangerRepository {
         if (wildlifeRangers.contains(wildlifeRanger1)){
             wildlifeRangers.remove(wildlifeRanger1);
             wildlifeRangers.add(wildlifeRanger);
-        }*/
+        }
         wildlifeRangers.replace(wildlifeRanger.getEmpId(), wildlifeRanger);
         return wildlifeRangers.get(wildlifeRanger.getEmpId());
     }
@@ -62,7 +62,7 @@ public class WildlifeRangerRepositoryImp implements WildlifeRangerRepository {
         /*WildlifeRanger wildlifeRanger = find(id);
         if (wildlifeRanger == null){
             return null;
-        }*/
+        }
         return wildlifeRangers.get(id);
     }
-}
+}*/

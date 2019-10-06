@@ -1,4 +1,4 @@
-package ac.za.cput.repository.gameReserve.Imp;
+/*package ac.za.cput.repository.gameReserve.Imp;
 
 import ac.za.cput.domain.gameReserve.Clinic;
 import ac.za.cput.repository.gameReserve.ClinicRepository;
@@ -32,7 +32,7 @@ public class ClinicRepositoryImp implements ClinicRepository {
 
    /* public Clinic find(int id){
         return clinics.stream().filter(clinic -> clinic.getClinicId() == id).findAny().orElse(null);
-    }*/
+    }
 
     @Override
     public Clinic create(Clinic clinic) {
@@ -46,7 +46,7 @@ public class ClinicRepositoryImp implements ClinicRepository {
         if (clinics.contains(clinic1)){
             clinics.remove(clinic1);
             clinics.add(clinic);
-        }*/
+        }
         clinics.replace(clinic.getClinicId(), clinic);
         return clinics.get(clinic.getClinicId());
     }
@@ -66,7 +66,7 @@ public class ClinicRepositoryImp implements ClinicRepository {
         }
         else{
             return clinic;
-        }*/
+        }
         return clinics.get(id);
     }
-}
+}*/

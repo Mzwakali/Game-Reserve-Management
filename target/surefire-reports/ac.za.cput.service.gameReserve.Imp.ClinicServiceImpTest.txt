@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: ac.za.cput.service.gameReserve.Imp.ClinicServiceImpTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.027 s <<< FAILURE! - in ac.za.cput.service.gameReserve.Imp.ClinicServiceImpTest
+initializationError(ac.za.cput.service.gameReserve.Imp.ClinicServiceImpTest)  Time elapsed: 0.024 s  <<< ERROR!
+java.lang.NoClassDefFoundError: Could not initialize class org.springframework.test.context.junit4.SpringRunner
+
