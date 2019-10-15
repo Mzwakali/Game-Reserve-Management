@@ -1,7 +1,9 @@
 package ac.za.cput.domain.gameReserve;
 
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import java.util.List;
 import java.util.Set;
 
@@ -10,6 +12,7 @@ public class ProtectedArea extends Grounds{
 
 
     private int areaId;
+    @ElementCollection
     private List<Department> departments;
 
     public ProtectedArea(ProtectedAreaBuilder protectedAreaBuilder) {

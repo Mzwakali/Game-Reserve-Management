@@ -1,7 +1,9 @@
 package ac.za.cput.domain.gameReserve;
 
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import java.awt.*;
 import java.util.List;
 
@@ -11,6 +13,7 @@ public class Clinic extends GameReserve{
 
     private int clinicId;
     private String clinicName;
+    @ElementCollection
     private List<Department> departments;
 
     public Clinic() {

@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: ac.za.cput.controller.employee.CaretakerControllerTest
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.343 s <<< FAILURE! - in ac.za.cput.controller.employee.CaretakerControllerTest
-initializationError(ac.za.cput.controller.employee.CaretakerControllerTest)  Time elapsed: 0.01 s  <<< ERROR!
-java.lang.ExceptionInInitializerError
-Caused by: java.lang.IllegalStateException: SpringJUnit4ClassRunner requires JUnit 4.12 or higher.
-
